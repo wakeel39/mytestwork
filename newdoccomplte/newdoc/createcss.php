@@ -524,8 +524,9 @@ td {
 	position:relative;
 	top:1px;
 }
-
-		
+.theader {     background: #61AD3D;
+    color: #fff; }
+#search_m { margin: 5px; width: 86%; }
 		';
 		
 //if (!file_exists($css_file_name)) {

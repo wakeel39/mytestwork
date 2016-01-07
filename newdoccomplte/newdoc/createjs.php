@@ -224,6 +224,24 @@ function FormSubmitData(url,id) {
 	});
 	return false;
 }
+
+$(function(){
+
+    $('#search_m').keyup(function(){
+
+        var searchText = $(this).val().toLowerCase();
+
+        $('ul > li').each(function(){
+
+            var currentLiText = $(this).text().toLowerCase(),
+                showCurrentLi = currentLiText.indexOf(searchText) != -1;
+
+            $(this).toggle(showCurrentLi);
+
+        });     
+    });
+
+});
 ";
 //if (!file_exists($js_file_name)) {
 $file_name = fopen($js_file_name, 'a');
