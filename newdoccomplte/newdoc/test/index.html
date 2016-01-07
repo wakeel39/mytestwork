@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Image Upload Form</title>
+    <script src="//code.jquery.com/jquery-1.9.1.js"></script>
+    <script type="text/javascript">
+        function submitForm(id) {
+            console.log("submit event");
+            var fd = new FormData(document.getElementById(id));
+           // fd.append("label", "WEBUPLOAD");
+            $.ajax({
+              url: "http://52.34.59.23/WestChesterRideCorp/json.php",
+              type: "POST",
+              data: fd,
+              enctype: 'multipart/form-data',
+              processData: false,  // tell jQuery not to process the data
+              contentType: false   // tell jQuery not to set contentType
+            }).done(function( data ) {
+                console.log("PHP Output:");
+                console.log( data );
+            });
+            return false;
+        }
+    </script>
+</head>
+
+<body>
+    <form method="post" id="fileinfo" name="fileinfo">
+        <label>Select a file:</label><br>
+		 <input type="text" name="tag" value="getVechileList" required />
+        <input type="file" name="file" required />
+        <input type="submit" value="Upload" />
+    </form>
+	<a onClick="submitForm('fileinfo')" >Submit </a>
+    <div id="output"></div>
+</body>
+</html>

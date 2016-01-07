@@ -1,0 +1,2087 @@
+<!doctype html>  
+<!--[if IE 6 ]><html lang="en-us" class="ie6"> <![endif]-->
+<!--[if IE 7 ]><html lang="en-us" class="ie7"> <![endif]-->
+<!--[if IE 8 ]><html lang="en-us" class="ie8"> <![endif]-->
+<!--[if (gt IE 7)|!(IE)]><!-->
+<html lang="en-us"><!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<title>West Chester Documantion </title>
+         <script src="http://code.jquery.com/jquery-1.7.1.js" type="text/javascript"></script>
+		 
+		 <script src="assets/js/jquery.ajax-cross-origin.min.js"></script>
+        <script src="assets/js/jquery.scrollTo.js"></script>
+	<script>document.createElement("section");var duration="500",easing="swing";</script>
+	<script src="assets/js/script.js"></script>
+	<link rel="stylesheet" href="assets/css/documenter_style.css" media="all">
+	
+	
+</head>
+<body>
+
+	<div id="documenter_sidebar"><a href="#documenter_cover" id="documenter_logo">West Chester</a><ul id="documenter_nav"><li><a class="current" href="#getVechileList">   getVechileList</a></li><li><a class="current" href="#getUserPromoCode">   getUserPromoCode</a></li><li><a class="current" href="#getPromoCode">   getPromoCode</a></li><li><a class="current" href="#getTotalUserCredit">   getTotalUserCredit</a></li><li><a class="current" href="#getUsersPromo">   getUsersPromo</a></li><li><a class="current" href="#get_advanced_booking">   get_advanced_booking</a></li><li><a class="current" href="#userPaymentHistory">   userPaymentHistory</a></li><li><a class="current" href="#AddUserCard">   AddUserCard</a></li><li><a class="current" href="#getVehicleTypes">   getVehicleTypes</a></li><li><a class="current" href="#getUserCards">   getUserCards</a></li><li><a class="current" href="#updateUserCard">   updateUserCard</a></li><li><a class="current" href="#deleteUserCards">   deleteUserCards</a></li><li><a class="current" href="#PaymentByNounce">   PaymentByNounce </a></li><li><a class="current" href="#PaymentByCash">   PaymentByCash  </a></li><li><a class="current" href="#sendPhoneCode">   sendPhoneCode  </a></li><li><a class="current" href="#verifyPhoneCode">   verifyPhoneCode  </a></li><li><a class="current" href="#driver_register">   driver_register  </a></li><li><a class="current" href="#pass_register">   pass_register  </a></li><li><a class="current" href="#login">   login  </a></li><li><a class="current" href="#update_user_inf">   update_user_inf  </a></li><li><a class="current" href="#update_driver_info">   update_driver_info   </a></li><li><a class="current" href="#on_click_boarding">   on_click_boarding  </a></li><li><a class="current" href="#logout">   logout  </a></li><li><a class="current" href="#get_driver">   get_driver</a></li><li><a class="current" href="#get_passenger">   get_passenger</a></li><li><a class="current" href="#update_driver_location">   update_driver_location</a></li><li><a class="current" href="#update_passenger_location">   update_passenger_location</a></li><li><a class="current" href="#update_passenger_location2">   update_passenger_location2</a></li><li><a class="current" href="#call_driver_booking">   call_driver_booking</a></li><li><a class="current" href="#call_driver_booking2">   call_driver_booking2</a></li><li><a class="current" href="#get_normal_booking_details">   get_normal_booking_details</a></li><li><a class="current" href="#driver_response_to_passenger_call">   driver_response_to_passenger_call</a></li><li><a class="current" href="#passenger_response_to_driver_call">   passenger_response_to_driver_call</a></li><li><a class="current" href="#passenger_start_trip">   passenger_start_trip</a></li><li><a class="current" href="#passenger_response_to_driver_call_new">   passenger_response_to_driver_call_new</a></li><li><a class="current" href="#passenger_response_to_driver_call_accept">   passenger_response_to_driver_call_accept</a></li><li><a class="current" href="#passenger_refuse_driver_call">   passenger_refuse_driver_call</a></li><li><a class="current" href="#passenger_response_to_driver_call_reject">   passenger_response_to_driver_call_reject</a></li><li><a class="current" href="#driver_response_to_passenger_call_reject">   driver_response_to_passenger_call_reject</a></li><li><a class="current" href="#iAmArrived">   iAmArrived</a></li><li><a class="current" href="#start_boarding_by_driver">   start_boarding_by_driver</a></li><li><a class="current" href="#start_boarding_by_passenger">   start_boarding_by_passenger</a></li><li><a class="current" href="#end_boarding_by_passenger">   end_boarding_by_passenger</a></li><li><a class="current" href="#end_boarding_by_driver">   end_boarding_by_driver</a></li><li><a class="current" href="#response_feedback">   response_feedback</a></li><li><a class="current" href="#send_chat">   send_chat</a></li><li><a class="current" href="#get_chat">   get_chat</a></li><li><a class="current" href="#journey_history">   journey_history</a></li><li><a class="current" href="#advance_booking_jobs">   advance_booking_jobs</a></li><li><a class="current" href="#job_cal">   job_cal</a></li><li><a class="current" href="#job_cal2">   job_cal2</a></li><li><a class="current" href="#job_cal3">   job_cal3</a></li><li><a class="current" href="#near_by_drivers">   near_by_drivers</a></li><li><a class="current" href="#conversation_list">   conversation_list</a></li><li><a class="current" href="#chat_history">   chat_history</a></li><li><a class="current" href="#update_regid">   update_regid</a></li></ul><div id="documenter_copyright">Copyright 2016 APPLICONIC</a> 
+		</div>
+	</div>
+	<div id="documenter_content"><section id="getVechileList"><H1>   getVechileList</H1> <div class="btn_get"> GET</div><hr/> <table><tr><th> Name  </th><Td>   getVechileList</td></tr><tr><th> Url  </th><Td>    json.php</td></tr><tr><th> Parameters  </th><Td><table><tr><th>Name</th><th>Type</th><th>Required</th><th>Description</th></tr><tr><td>tag</td><td>string</td><td>Yes</td><td></td></tr></table></td></tr><tr><Th> Success  </th><Td><pre>{
+    "type": true,
+    "message": "successfully",
+    "data": [
+        {
+            "ID": "29",
+            "name": "Executive",
+            "basefare": "12",
+            "more_basefare": "12",
+            "map_icon": "p8kh7q2qsmcmqlk7yhvv.png",
+            "selected_icon": "ri7btk7oje5rqxonl98j.png",
+            "icon": "ip3vbh89ixffn5xmeeo2.png",
+            "minPrice": "1",
+            "pricePerMile": "212",
+            "tax_per_fee": "12",
+            "brain_tree_per_fee": "12",
+            "admin_tax_fee": "12",
+            "extra_pre_pass_price": "11",
+            "server_link": "http:\/\/res.cloudinary.com\/appliconic\/image\/upload\/"
+        },
+        {
+            "ID": "30",
+            "name": "MPV",
+            "basefare": "12",
+            "more_basefare": "12",
+            "map_icon": "t8wynbwx07wp9qvos9jn.png",
+            "selected_icon": "fegfujksa0m9enjdtxsn.png",
+            "icon": "ysyfwxcgp9y94zynvb1w.png",
+            "minPrice": "1212",
+            "pricePerMile": "12",
+            "tax_per_fee": "12",
+            "brain_tree_per_fee": "1",
+            "admin_tax_fee": "100",
+            "extra_pre_pass_price": "12",
+            "server_link": "http:\/\/res.cloudinary.com\/appliconic\/image\/upload\/"
+        },
+        {
+            "ID": "31",
+            "name": "Mini Bus",
+            "basefare": "5",
+            "more_basefare": "454",
+            "map_icon": "bktzoktdh8lcialps84f.png",
+            "selected_icon": "x9jikck06mcmpqbnkufg.png",
+            "icon": "rxnmvpykqpkckfknxgdw.png",
+            "minPrice": "445",
+            "pricePerMile": "454",
+            "tax_per_fee": "5",
+            "brain_tree_per_fee": "100",
+            "admin_tax_fee": "5",
+            "extra_pre_pass_price": "5",
+            "server_link": "http:\/\/res.cloudinary.com\/appliconic\/image\/upload\/"
+        },
+        {
+            "ID": "32",
+            "name": "Normal",
+            "basefare": "1",
+            "more_basefare": "1",
+            "map_icon": "uhwppvux4jgbjkruhg21.png",
+            "selected_icon": "v8fz35px8vkbq6ohzxwg.png",
+            "icon": "d8szqyad02ldob8uuyta.png",
+            "minPrice": "121",
+            "pricePerMile": "212",
+            "tax_per_fee": "21",
+            "brain_tree_per_fee": "21",
+            "admin_tax_fee": "100",
+            "extra_pre_pass_price": "1",
+            "server_link": "http:\/\/res.cloudinary.com\/appliconic\/image\/upload\/"
+        },
+        {
+            "ID": "33",
+            "name": "Estate",
+            "basefare": "3",
+            "more_basefare": "23",
+            "map_icon": "p9x41fe09yjkrzremxzx.png",
+            "selected_icon": "kg0k45i3pt2hsxginzvn.png",
+            "icon": "jmmepnleygxuhj9izzyh.png",
+            "minPrice": "23",
+            "pricePerMile": "23",
+            "tax_per_fee": "23",
+            "brain_tree_per_fee": "23",
+            "admin_tax_fee": "23",
+            "extra_pre_pass_price": "23",
+            "server_link": "http:\/\/res.cloudinary.com\/appliconic\/image\/upload\/"
+        }
+    ]
+}</pre></td></tr><tr><Th> Error  </th><Td><pre>{
+    "type": false,
+    "message": "NO tag found"
+}</pre></td></tr><tr><Th> Description  </th><Td>  </td></tr><tr><Th> Test Api  </th><Td><form action="http://52.34.59.23/WestChesterRideCorp/json.php" method="GET" id="f_1" enctype="multipart/form-data"><table><input type="hidden" name="url" value="http://52.34.59.23/WestChesterRideCorp/json.php" ><input type="hidden" name="method" value="GET" ><tr><th>Tag</th><Td><input type="text" readonly name="tag" value="getVechileList" ></td></tr><tr><td colspan="2"><a onClick="FormSubmitData('http://52.34.59.23/WestChesterRideCorp/json.php',1)" class="myButton">Test</a></td></tr><tr><td colspan="2"><div id="response_testapi_1"></div> </td></tr></table></form></td></tr></table></section><section id="getUserPromoCode"><H1>   getUserPromoCode</H1> <div class="btn_get"> GET</div><hr/> <table><tr><th> Name  </th><Td>   getUserPromoCode</td></tr><tr><th> Url  </th><Td>    json.php</td></tr><tr><th> Parameters  </th><Td><table><tr><th>Name</th><th>Type</th><th>Required</th><th>Description</th></tr><tr><td>tag</td><td>string</td><td>Yes</td><td></td></tr><tr><td>email</td><td>string</td><td>Yes</td><td>any valid passenger email</td></tr></table></td></tr><tr><Th> Success  </th><Td><pre>{
+    "type": true,
+    "message": "successfully",
+    "data": {
+        "message": "Give friend $60 towrds a ride, after they ride you get $60 Credit too.",
+        "promocode": "west08137",
+        "price": "60"
+    }
+}</pre></td></tr><tr><Th> Error  </th><Td><pre>{
+    "type": false,
+    "message": "email not found"
+}</pre></td></tr><tr><Th> Description  </th><Td>  </td></tr><tr><Th> Test Api  </th><Td><form action="http://52.34.59.23/WestChesterRideCorp/json.php" method="GET" id="f_2" enctype="multipart/form-data"><table><input type="hidden" name="url" value="http://52.34.59.23/WestChesterRideCorp/json.php" ><input type="hidden" name="method" value="GET" ><tr><th>Tag</th><Td><input type="text" readonly name="tag" value="getUserPromoCode" ></td></tr><tr><th>Email</th><Td><input type="text" name="email" value="pass@west.com" ></td></tr><tr><td colspan="2"><a onClick="FormSubmitData('http://52.34.59.23/WestChesterRideCorp/json.php',2)" class="myButton">Test</a></td></tr><tr><td colspan="2"><div id="response_testapi_2"></div> </td></tr></table></form></td></tr></table></section><section id="getPromoCode"><H1>   getPromoCode</H1> <div class="btn_get"> GET</div><hr/> <table><tr><th> Name  </th><Td>   getPromoCode</td></tr><tr><th> Url  </th><Td>    json.php</td></tr><tr><th> Parameters  </th><Td><table><tr><th>Name</th><th>Type</th><th>Required</th><th>Description</th></tr><tr><td>tag</td><td>string</td><td>Yes</td><td></td></tr><tr><td>email</td><td>string</td><td>Yes</td><td>any valid passenger email</td></tr><tr><td>promocode</td><td>int</td><td>Yes</td><td>any valid promocode</td></tr></table></td></tr><tr><Th> Success  </th><Td><pre>{
+    "type": false,
+    "message": "You have enter Invalid promocode."
+}</pre></td></tr><tr><Th> Error  </th><Td><pre>{
+    "type": false,
+    "message": "promocode not found"
+}</pre></td></tr><tr><Th> Description  </th><Td>  </td></tr><tr><Th> Test Api  </th><Td><form action="http://52.34.59.23/WestChesterRideCorp/json.php" method="GET" id="f_3" enctype="multipart/form-data"><table><input type="hidden" name="url" value="http://52.34.59.23/WestChesterRideCorp/json.php" ><input type="hidden" name="method" value="GET" ><tr><th>Tag</th><Td><input type="text" readonly name="tag" value="getPromoCode" ></td></tr><tr><th>Email</th><Td><input type="text" name="email" value="pass@west.com" ></td></tr><tr><th>Promocode</th><Td><input type="text" name="promocode" value="12345" ></td></tr><tr><td colspan="2"><a onClick="FormSubmitData('http://52.34.59.23/WestChesterRideCorp/json.php',3)" class="myButton">Test</a></td></tr><tr><td colspan="2"><div id="response_testapi_3"></div> </td></tr></table></form></td></tr></table></section><section id="getTotalUserCredit"><H1>   getTotalUserCredit</H1> <div class="btn_get"> GET</div><hr/> <table><tr><th> Name  </th><Td>   getTotalUserCredit</td></tr><tr><th> Url  </th><Td>    json.php</td></tr><tr><th> Parameters  </th><Td><table><tr><th>Name</th><th>Type</th><th>Required</th><th>Description</th></tr><tr><td>tag</td><td>string</td><td>Yes</td><td></td></tr><tr><td>email</td><td>string</td><td>Yes</td><td>any valid passenger email</td></tr></table></td></tr><tr><Th> Success  </th><Td><pre>{
+    "type": false,
+    "message": "Data not found",
+    "total": 0
+}</pre></td></tr><tr><Th> Error  </th><Td><pre>{
+    "type": false,
+    "message": "email not found"
+}</pre></td></tr><tr><Th> Description  </th><Td>  </td></tr><tr><Th> Test Api  </th><Td><form action="http://52.34.59.23/WestChesterRideCorp/json.php" method="GET" id="f_4" enctype="multipart/form-data"><table><input type="hidden" name="url" value="http://52.34.59.23/WestChesterRideCorp/json.php" ><input type="hidden" name="method" value="GET" ><tr><th>Tag</th><Td><input type="text" readonly name="tag" value="getTotalUserCredit" ></td></tr><tr><th>Email</th><Td><input type="text" name="email" value="us12@yahoo.com" ></td></tr><tr><td colspan="2"><a onClick="FormSubmitData('http://52.34.59.23/WestChesterRideCorp/json.php',4)" class="myButton">Test</a></td></tr><tr><td colspan="2"><div id="response_testapi_4"></div> </td></tr></table></form></td></tr></table></section><section id="getUsersPromo"><H1>   getUsersPromo</H1> <div class="btn_get"> GET</div><hr/> <table><tr><th> Name  </th><Td>   getUsersPromo</td></tr><tr><th> Url  </th><Td>    json.php</td></tr><tr><th> Parameters  </th><Td><table><tr><th>Name</th><th>Type</th><th>Required</th><th>Description</th></tr><tr><td>tag</td><td>string</td><td>Yes</td><td></td></tr><tr><td>email</td><td>string</td><td>Yes</td><td>any valid passenger email</td></tr></table></td></tr><tr><Th> Success  </th><Td><pre>{
+    "type": false,
+    "message": "Data not found"
+}</pre></td></tr><tr><Th> Error  </th><Td><pre>{
+    "type": false,
+    "message": "email not found"
+}</pre></td></tr><tr><Th> Description  </th><Td>  </td></tr><tr><Th> Test Api  </th><Td><form action="http://52.34.59.23/WestChesterRideCorp/json.php" method="GET" id="f_5" enctype="multipart/form-data"><table><input type="hidden" name="url" value="http://52.34.59.23/WestChesterRideCorp/json.php" ><input type="hidden" name="method" value="GET" ><tr><th>Tag</th><Td><input type="text" readonly name="tag" value="getUsersPromo" ></td></tr><tr><th>Email</th><Td><input type="text" name="email" value="us122@yahoo.com" ></td></tr><tr><td colspan="2"><a onClick="FormSubmitData('http://52.34.59.23/WestChesterRideCorp/json.php',5)" class="myButton">Test</a></td></tr><tr><td colspan="2"><div id="response_testapi_5"></div> </td></tr></table></form></td></tr></table></section><section id="get_advanced_booking"><H1>   get_advanced_booking</H1> <div class="btn_get"> GET</div><hr/> <table><tr><th> Name  </th><Td>   get_advanced_booking</td></tr><tr><th> Url  </th><Td>    json.php</td></tr><tr><th> Parameters  </th><Td><table><tr><th>Name</th><th>Type</th><th>Required</th><th>Description</th></tr><tr><td>user_email</td><td>string</td><td>Yes</td><td>any valid passenger email</td></tr><tr><td>job_start_time</td><td>string</td><td>Yes</td><td>1230</td></tr><tr><td>start_late</td><td>string</td><td>Yes</td><td>start lat </td></tr><tr><td>end_late</td><td>string</td><td>Yes</td><td>end late</td></tr><tr><td>start_longe</td><td>string</td><td>Yes</td><td>start longatitue</td></tr><tr><td>end_longe</td><td>string</td><td>Yes</td><td>end longatitue</td></tr><tr><td>job_type</td><td>string</td><td>Yes</td><td>job type (Normal,Excutive)</td></tr><tr><td>note</td><td>string</td><td>Yes</td><td>note</td></tr><tr><td>passcount</td><td>string</td><td>Yes</td><td>passgener counter</td></tr></table></td></tr><tr><Th> Success  </th><Td><pre>{
+    "type": false,
+    "message": "NO tag found"
+}</pre></td></tr><tr><Th> Error  </th><Td><pre>{
+    "type": false,
+    "message": "NO tag found"
+}</pre></td></tr><tr><Th> Description  </th><Td>  </td></tr><tr><Th> Test Api  </th><Td><form action="http://52.34.59.23/WestChesterRideCorp/json.php" method="GET" id="f_6" enctype="multipart/form-data"><table><input type="hidden" name="url" value="http://52.34.59.23/WestChesterRideCorp/json.php" ><input type="hidden" name="method" value="GET" ><tr><th>User_email</th><Td><input type="text" name="user_email" value="us123@yahoo.com" ></td></tr><tr><th>Job_start_time</th><Td><input type="text" name="job_start_time" value="job" ></td></tr><tr><th>Start_late</th><Td><input type="text" name="start_late" value="1250" ></td></tr><tr><th>End_late</th><Td><input type="text" name="end_late" value="1630" ></td></tr><tr><th>Start_longe</th><Td><input type="text" name="start_longe" value="114.2" ></td></tr><tr><th>End_longe</th><Td><input type="text" name="end_longe" value="114.4" ></td></tr><tr><th>Job_type</th><Td><input type="text" name="job_type" value="normal" ></td></tr><tr><th>Note</th><Td><input type="text" name="note" value="goodjob" ></td></tr><tr><th>Passcount</th><Td><input type="text" name="passcount" value="55" ></td></tr><tr><td colspan="2"><a onClick="FormSubmitData('http://52.34.59.23/WestChesterRideCorp/json.php',6)" class="myButton">Test</a></td></tr><tr><td colspan="2"><div id="response_testapi_6"></div> </td></tr></table></form></td></tr></table></section><section id="userPaymentHistory"><H1>   userPaymentHistory</H1> <div class="btn_get"> GET</div><hr/> <table><tr><th> Name  </th><Td>   userPaymentHistory</td></tr><tr><th> Url  </th><Td>    json.php</td></tr><tr><th> Parameters  </th><Td><table><tr><th>Name</th><th>Type</th><th>Required</th><th>Description</th></tr><tr><td>tag</td><td>string</td><td>Yes</td><td></td></tr><tr><td>txtb_email</td><td>string</td><td>Yes</td><td>any valid passenger email</td></tr><tr><td>trans_id</td><td>string</td><td>Yes</td><td>comma separated transaction ids to get only limit transactions history</td></tr></table></td></tr><tr><Th> Success  </th><Td><pre>{
+    "type": false,
+    "message": "Invalid user"
+}</pre></td></tr><tr><Th> Error  </th><Td><pre>{
+    "type": false,
+    "message": "Invalid user"
+}</pre></td></tr><tr><Th> Description  </th><Td>  </td></tr><tr><Th> Test Api  </th><Td><form action="http://52.34.59.23/WestChesterRideCorp/json.php" method="GET" id="f_7" enctype="multipart/form-data"><table><input type="hidden" name="url" value="http://52.34.59.23/WestChesterRideCorp/json.php" ><input type="hidden" name="method" value="GET" ><tr><th>Tag</th><Td><input type="text" readonly name="tag" value="userPaymentHistory" ></td></tr><tr><th>Txtb_email</th><Td><input type="text" name="txtb_email" value="us124@yahoo.com" ></td></tr><tr><th>Trans_id</th><Td><input type="text" name="trans_id" value="2,3" ></td></tr><tr><td colspan="2"><a onClick="FormSubmitData('http://52.34.59.23/WestChesterRideCorp/json.php',7)" class="myButton">Test</a></td></tr><tr><td colspan="2"><div id="response_testapi_7"></div> </td></tr></table></form></td></tr></table></section><section id="AddUserCard"><H1>   AddUserCard</H1> <div class="btn_get"> GET</div><hr/> <table><tr><th> Name  </th><Td>   AddUserCard</td></tr><tr><th> Url  </th><Td>    json.php</td></tr><tr><th> Parameters  </th><Td><table><tr><th>Name</th><th>Type</th><th>Required</th><th>Description</th></tr><tr><td>tag</td><td>string</td><td>Yes</td><td></td></tr><tr><td>txtb_email</td><td>string</td><td>Yes</td><td>any valid passenger email</td></tr><tr><td>trans_id</td><td>string</td><td>Yes</td><td>Encrypted card String</td></tr><tr><td>default</td><td>string</td><td>Yes</td><td>default 0 OR 1</td></tr></table></td></tr><tr><Th> Success  </th><Td><pre>{
+    "type": true,
+    "message": "Card Added Successfully",
+    "cardID": 133
+}</pre></td></tr><tr><Th> Error  </th><Td><pre>{
+    "type": true,
+    "message": "Card Added Successfully",
+    "cardID": 134
+}</pre></td></tr><tr><Th> Description  </th><Td>  </td></tr><tr><Th> Test Api  </th><Td><form action="http://52.34.59.23/WestChesterRideCorp/json.php" method="GET" id="f_8" enctype="multipart/form-data"><table><input type="hidden" name="url" value="http://52.34.59.23/WestChesterRideCorp/json.php" ><input type="hidden" name="method" value="GET" ><tr><th>Tag</th><Td><input type="text" readonly name="tag" value="AddUserCard" ></td></tr><tr><th>Txtb_email</th><Td><input type="text" name="txtb_email" value="us125@yahoo.com" ></td></tr><tr><th>Trans_id</th><Td><input type="text" name="trans_id" value="654466464" ></td></tr><tr><th>Default</th><Td><input type="text" name="default" value="0" ></td></tr><tr><td colspan="2"><a onClick="FormSubmitData('http://52.34.59.23/WestChesterRideCorp/json.php',8)" class="myButton">Test</a></td></tr><tr><td colspan="2"><div id="response_testapi_8"></div> </td></tr></table></form></td></tr></table></section><section id="getVehicleTypes"><H1>   getVehicleTypes</H1> <div class="btn_get"> GET</div><hr/> <table><tr><th> Name  </th><Td>   getVehicleTypes</td></tr><tr><th> Url  </th><Td>    json.php</td></tr><tr><th> Parameters  </th><Td><table><tr><th>Name</th><th>Type</th><th>Required</th><th>Description</th></tr><tr><td>tag</td><td>string</td><td>Yes</td><td></td></tr><tr><td>type</td><td>string</td><td>Yes</td><td>true or false</td></tr><tr><td>message</td><td>string</td><td>Yes</td><td>Vehicle</td></tr><tr><td>data</td><td>string</td><td>Yes</td><td>the Vehicle Types array</td></tr></table></td></tr><tr><Th> Success  </th><Td><pre>{
+    "type": true,
+    "message": "All Vehicle Types",
+    "data": [
+        {
+            "name": "Executive",
+            "minPrice": "1",
+            "pricePerMile": "212"
+        },
+        {
+            "name": "MPV",
+            "minPrice": "1212",
+            "pricePerMile": "12"
+        },
+        {
+            "name": "Mini Bus",
+            "minPrice": "445",
+            "pricePerMile": "454"
+        },
+        {
+            "name": "Normal",
+            "minPrice": "121",
+            "pricePerMile": "212"
+        },
+        {
+            "name": "Estate",
+            "minPrice": "23",
+            "pricePerMile": "23"
+        }
+    ]
+}</pre></td></tr><tr><Th> Error  </th><Td><pre>{
+    "type": true,
+    "message": "All Vehicle Types",
+    "data": [
+        {
+            "name": "Executive",
+            "minPrice": "1",
+            "pricePerMile": "212"
+        },
+        {
+            "name": "MPV",
+            "minPrice": "1212",
+            "pricePerMile": "12"
+        },
+        {
+            "name": "Mini Bus",
+            "minPrice": "445",
+            "pricePerMile": "454"
+        },
+        {
+            "name": "Normal",
+            "minPrice": "121",
+            "pricePerMile": "212"
+        },
+        {
+            "name": "Estate",
+            "minPrice": "23",
+            "pricePerMile": "23"
+        }
+    ]
+}</pre></td></tr><tr><Th> Description  </th><Td>  </td></tr><tr><Th> Test Api  </th><Td><form action="http://52.34.59.23/WestChesterRideCorp/json.php" method="GET" id="f_9" enctype="multipart/form-data"><table><input type="hidden" name="url" value="http://52.34.59.23/WestChesterRideCorp/json.php" ><input type="hidden" name="method" value="GET" ><tr><th>Tag</th><Td><input type="text" readonly name="tag" value="getVehicleTypes" ></td></tr><tr><th>Type</th><Td><input type="text" name="type" value="true" ></td></tr><tr><th>Message</th><Td><input type="text" name="message" value="All" ></td></tr><tr><th>Data</th><Td><input type="text" name="data" value="[1,2,3,4]" ></td></tr><tr><td colspan="2"><a onClick="FormSubmitData('http://52.34.59.23/WestChesterRideCorp/json.php',9)" class="myButton">Test</a></td></tr><tr><td colspan="2"><div id="response_testapi_9"></div> </td></tr></table></form></td></tr></table></section><section id="getUserCards"><H1>   getUserCards</H1> <div class="btn_get"> GET</div><hr/> <table><tr><th> Name  </th><Td>   getUserCards</td></tr><tr><th> Url  </th><Td>    json.php</td></tr><tr><th> Parameters  </th><Td><table><tr><th>Name</th><th>Type</th><th>Required</th><th>Description</th></tr><tr><td>tag</td><td>string</td><td>Yes</td><td></td></tr><tr><td>txtb_email</td><td>string</td><td>Yes</td><td>any valid passenger email</td></tr></table></td></tr><tr><Th> Success  </th><Td><pre>{
+    "type": true,
+    "message": "User Card(s) Found",
+    "data": [
+        {
+            "cardID": "4",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "5",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "6",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "7",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "8",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "9",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "10",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "11",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "12",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "13",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "14",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "15",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "16",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "17",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "18",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "19",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "20",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "21",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "22",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "23",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "24",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "25",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "26",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "27",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "28",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "29",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "30",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "31",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "32",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "33",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "34",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "35",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "36",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "37",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "38",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "39",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "40",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "41",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "42",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "43",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "44",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "45",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "46",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "47",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "48",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "49",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "50",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "51",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "52",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "53",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "54",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "55",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "56",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "57",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "58",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "59",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "60",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "61",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "62",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "63",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "64",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "65",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "66",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "67",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "68",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "69",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "70",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "71",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "72",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "73",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "74",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "75",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "76",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "77",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "78",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "79",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "80",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "81",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "82",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "83",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "84",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "85",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "86",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "87",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "88",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "89",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "90",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "91",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "92",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "93",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "94",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "95",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "96",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "97",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "98",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "99",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "100",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "101",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "102",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "103",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "104",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "105",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "106",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "107",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "108",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "109",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "110",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "111",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "112",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "113",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "114",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "115",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "116",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "117",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "118",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "119",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "120",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "121",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "122",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "123",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "124",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "125",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "126",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "127",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "128",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "129",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "130",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "131",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "132",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "133",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "134",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        }
+    ]
+}</pre></td></tr><tr><Th> Error  </th><Td><pre>{
+    "type": true,
+    "message": "User Card(s) Found",
+    "data": [
+        {
+            "cardID": "4",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "5",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "6",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "7",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "8",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "9",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "10",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "11",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "12",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "13",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "14",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "15",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "16",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "17",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "18",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "19",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "20",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "21",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "22",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "23",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "24",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "25",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "26",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "27",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "28",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "29",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "30",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "31",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "32",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "33",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "34",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "35",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "36",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "37",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "38",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "39",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "40",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "41",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "42",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "43",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "44",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "45",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "46",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "47",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "48",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "49",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "50",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "51",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "52",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "53",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "54",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "55",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "56",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "57",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "58",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "59",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "60",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "61",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "62",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "63",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "64",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "65",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "66",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "67",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "68",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "69",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "70",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "71",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "72",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "73",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "74",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "75",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "76",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "77",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "78",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "79",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "80",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "81",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "82",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "83",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "84",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "85",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "86",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "87",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "88",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "89",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "90",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "91",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "92",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "93",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "94",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "95",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "96",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "97",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "98",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "99",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "100",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "101",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "102",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "103",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "104",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "105",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "106",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "107",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "108",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "109",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "110",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "111",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "112",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "113",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "114",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "115",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "116",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "117",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "118",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "119",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "120",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "121",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "122",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "123",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "124",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "125",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "126",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "127",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "128",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "129",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "130",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "131",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "132",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "133",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        },
+        {
+            "cardID": "134",
+            "userID": "",
+            "txtb_card": "",
+            "default": "0"
+        }
+    ]
+}</pre></td></tr><tr><Th> Description  </th><Td>  </td></tr><tr><Th> Test Api  </th><Td><form action="http://52.34.59.23/WestChesterRideCorp/json.php" method="GET" id="f_10" enctype="multipart/form-data"><table><input type="hidden" name="url" value="http://52.34.59.23/WestChesterRideCorp/json.php" ><input type="hidden" name="method" value="GET" ><tr><th>Tag</th><Td><input type="text" readonly name="tag" value="getUserCards" ></td></tr><tr><th>Txtb_email</th><Td><input type="text" name="txtb_email" value="us126@yahoo.com" ></td></tr><tr><td colspan="2"><a onClick="FormSubmitData('http://52.34.59.23/WestChesterRideCorp/json.php',10)" class="myButton">Test</a></td></tr><tr><td colspan="2"><div id="response_testapi_10"></div> </td></tr></table></form></td></tr></table></section><section id="updateUserCard"><H1>   updateUserCard</H1> <div class="btn_get"> GET</div><hr/> <table><tr><th> Name  </th><Td>   updateUserCard</td></tr><tr><th> Url  </th><Td>    json.php</td></tr><tr><th> Parameters  </th><Td><table><tr><th>Name</th><th>Type</th><th>Required</th><th>Description</th></tr><tr><td>tag</td><td>string</td><td>Yes</td><td></td></tr><tr><td>txtb_email</td><td>string</td><td>Yes</td><td>any valid passenger email</td></tr><tr><td>cardID</td><td>int</td><td>Yes</td><td>cardID</td></tr></table></td></tr><tr><Th> Success  </th><Td><pre>{
+    "type": true,
+    "message": "Card Updated Successfully"
+}</pre></td></tr><tr><Th> Error  </th><Td><pre>{
+    "type": true,
+    "message": "Card Updated Successfully"
+}</pre></td></tr><tr><Th> Description  </th><Td>  </td></tr><tr><Th> Test Api  </th><Td><form action="http://52.34.59.23/WestChesterRideCorp/json.php" method="GET" id="f_11" enctype="multipart/form-data"><table><input type="hidden" name="url" value="http://52.34.59.23/WestChesterRideCorp/json.php" ><input type="hidden" name="method" value="GET" ><tr><th>Tag</th><Td><input type="text" readonly name="tag" value="updateUserCard" ></td></tr><tr><th>Txtb_email</th><Td><input type="text" name="txtb_email" value="us127@yahoo.com" ></td></tr><tr><th>CardID</th><Td><input type="text" name="cardID" value="2255" ></td></tr><tr><td colspan="2"><a onClick="FormSubmitData('http://52.34.59.23/WestChesterRideCorp/json.php',11)" class="myButton">Test</a></td></tr><tr><td colspan="2"><div id="response_testapi_11"></div> </td></tr></table></form></td></tr></table></section><section id="deleteUserCards"><H1>   deleteUserCards</H1> <div class="btn_get"> GET</div><hr/> <table><tr><th> Name  </th><Td>   deleteUserCards</td></tr><tr><th> Url  </th><Td>    json.php</td></tr><tr><th> Parameters  </th><Td><table><tr><th>Name</th><th>Type</th><th>Required</th><th>Description</th></tr><tr><td>tag</td><td>string</td><td>Yes</td><td></td></tr><tr><td>txtb_email</td><td>string</td><td>Yes</td><td>any valid passenger email</td></tr><tr><td>cardID</td><td>string</td><td>Yes</td><td>comma separated user ID's</td></tr></table></td></tr><tr><Th> Success  </th><Td><pre>{
+    "type": true,
+    "message": "Card(s) Deleted Successfully"
+}</pre></td></tr><tr><Th> Error  </th><Td><pre>{
+    "type": false,
+    "message": "Error Deleting Card(s)"
+}</pre></td></tr><tr><Th> Description  </th><Td>  </td></tr><tr><Th> Test Api  </th><Td><form action="http://52.34.59.23/WestChesterRideCorp/json.php" method="GET" id="f_12" enctype="multipart/form-data"><table><input type="hidden" name="url" value="http://52.34.59.23/WestChesterRideCorp/json.php" ><input type="hidden" name="method" value="GET" ><tr><th>Tag</th><Td><input type="text" readonly name="tag" value="deleteUserCards" ></td></tr><tr><th>Txtb_email</th><Td><input type="text" name="txtb_email" value="us127@yahoo.com" ></td></tr><tr><th>CardID</th><Td><input type="text" name="cardID" value="2255,555" ></td></tr><tr><td colspan="2"><a onClick="FormSubmitData('http://52.34.59.23/WestChesterRideCorp/json.php',12)" class="myButton">Test</a></td></tr><tr><td colspan="2"><div id="response_testapi_12"></div> </td></tr></table></form></td></tr></table></section><section id="PaymentByNounce"><H1>   PaymentByNounce </H1> <div class="btn_get"> GET</div><hr/> <table><tr><th> Name  </th><Td>   PaymentByNounce </td></tr><tr><th> Url  </th><Td>    json.php</td></tr><tr><th> Parameters  </th><Td><table><tr><th>Name</th><th>Type</th><th>Required</th><th>Description</th></tr><tr><td>tag</td><td>string</td><td>Yes</td><td></td></tr><tr><td>cardID</td><td>int</td><td>Yes</td><td>card id number, used for payment</td></tr><tr><td>paymentNonce</td><td>string</td><td>Yes</td><td>valid nonce token for payment</td></tr><tr><td>"txtb_email"</td><td>string</td><td>Yes</td><td>any valid passenger email</td></tr><tr><td>"paymentAmount"</td><td>string</td><td>Yes</td><td>valid amount</td></tr><tr><td>"refference_id"</td><td>int</td><td>Yes</td><td>trip reference id</td></tr></table></td></tr><tr><Th> Success  </th><Td><pre>{
+    "type": false,
+    "message": "Invalid Email found"
+}</pre></td></tr><tr><Th> Error  </th><Td><pre>{
+    "type": false,
+    "message": "Invalid Email found"
+}</pre></td></tr><tr><Th> Description  </th><Td>  </td></tr><tr><Th> Test Api  </th><Td><form action="http://52.34.59.23/WestChesterRideCorp/json.php" method="GET" id="f_13" enctype="multipart/form-data"><table><input type="hidden" name="url" value="http://52.34.59.23/WestChesterRideCorp/json.php" ><input type="hidden" name="method" value="GET" ><tr><th>Tag</th><Td><input type="text" readonly name="tag" value="PaymentByNounce" ></td></tr><tr><th>CardID</th><Td><input type="text" name="cardID" value="2255" ></td></tr><tr><th>PaymentNonce</th><Td><input type="text" name="paymentNonce" value="4454" ></td></tr><tr><th>"txtb_email"</th><Td><input type="text" name=""txtb_email"" value="us128@yahoo.com" ></td></tr><tr><th>"paymentAmount"</th><Td><input type="text" name=""paymentAmount"" value="65466" ></td></tr><tr><th>"refference_id"</th><Td><input type="text" name=""refference_id"" value="77" ></td></tr><tr><td colspan="2"><a onClick="FormSubmitData('http://52.34.59.23/WestChesterRideCorp/json.php',13)" class="myButton">Test</a></td></tr><tr><td colspan="2"><div id="response_testapi_13"></div> </td></tr></table></form></td></tr></table></section><section id="PaymentByCash"><H1>   PaymentByCash  </H1> <div class="btn_get"> GET</div><hr/> <table><tr><th> Name  </th><Td>   PaymentByCash  </td></tr><tr><th> Url  </th><Td>    json.php</td></tr><tr><th> Parameters  </th><Td><table><tr><th>Name</th><th>Type</th><th>Required</th><th>Description</th></tr><tr><td>tag</td><td>string</td><td>Yes</td><td></td></tr><tr><td>txtb_email</td><td>string</td><td>Yes</td><td>any valid passenger email</td></tr><tr><td>paymentAmount</td><td>string</td><td>Yes</td><td>valid amount</td></tr><tr><td>refference_id</td><td>int</td><td>Yes</td><td>trip reference id</td></tr></table></td></tr><tr><Th> Success  </th><Td><pre>{
+    "type": false,
+    "message": "Invalid Reference Id Found"
+}</pre></td></tr><tr><Th> Error  </th><Td><pre>{
+    "type": false,
+    "message": "Invalid Reference Id Found"
+}</pre></td></tr><tr><Th> Description  </th><Td>  </td></tr><tr><Th> Test Api  </th><Td><form action="http://52.34.59.23/WestChesterRideCorp/json.php" method="GET" id="f_14" enctype="multipart/form-data"><table><input type="hidden" name="url" value="http://52.34.59.23/WestChesterRideCorp/json.php" ><input type="hidden" name="method" value="GET" ><tr><th>Tag</th><Td><input type="text" readonly name="tag" value="PaymentByCash" ></td></tr><tr><th>Txtb_email</th><Td><input type="text" name="txtb_email" value="us129@yahoo.com" ></td></tr><tr><th>PaymentAmount</th><Td><input type="text" name="paymentAmount" value="55548" ></td></tr><tr><th>Refference_id</th><Td><input type="text" name="refference_id" value="78" ></td></tr><tr><td colspan="2"><a onClick="FormSubmitData('http://52.34.59.23/WestChesterRideCorp/json.php',14)" class="myButton">Test</a></td></tr><tr><td colspan="2"><div id="response_testapi_14"></div> </td></tr></table></form></td></tr></table></section><section id="sendPhoneCode"><H1>   sendPhoneCode  </H1> <div class="btn_get"> GET</div><hr/> <table><tr><th> Name  </th><Td>   sendPhoneCode  </td></tr><tr><th> Url  </th><Td>    json.php</td></tr><tr><th> Parameters  </th><Td><table><tr><th>Name</th><th>Type</th><th>Required</th><th>Description</th></tr><tr><td>tag</td><td>string</td><td>Yes</td><td></td></tr><tr><td>type</td><td>string</td><td>Yes</td><td>true or false</td></tr><tr><td>message</td><td>string</td><td>Yes</td><td>code</td></tr><tr><td>verificationId</td><td>int</td><td>Yes</td><td>this verification code ID</td></tr><tr><td>phoneNumber</td><td>string</td><td>Yes</td><td>the receive phone number</td></tr><tr><td>phoneCode</td><td>string</td><td>Yes</td><td>the code generated for phone number</td></tr></table></td></tr><tr><Th> Success  </th><Td><pre>{
+    "type": false,
+    "message": "Verification code not sent",
+    "phoneNumber": "923348688265"
+}</pre></td></tr><tr><Th> Error  </th><Td><pre>{
+    "type": false,
+    "message": "Verification code not sent",
+    "phoneNumber": "923348688265"
+}</pre></td></tr><tr><Th> Description  </th><Td>  </td></tr><tr><Th> Test Api  </th><Td><form action="http://52.34.59.23/WestChesterRideCorp/json.php" method="GET" id="f_15" enctype="multipart/form-data"><table><input type="hidden" name="url" value="http://52.34.59.23/WestChesterRideCorp/json.php" ><input type="hidden" name="method" value="GET" ><tr><th>Tag</th><Td><input type="text" readonly name="tag" value="sendPhoneCode" ></td></tr><tr><th>Type</th><Td><input type="text" name="type" value="true" ></td></tr><tr><th>Message</th><Td><input type="text" name="message" value="Verification" ></td></tr><tr><th>VerificationId</th><Td><input type="text" name="verificationId" value="78" ></td></tr><tr><th>PhoneNumber</th><Td><input type="text" name="phoneNumber" value="923348688265" ></td></tr><tr><th>PhoneCode</th><Td><input type="text" name="phoneCode" value="5466165" ></td></tr><tr><td colspan="2"><a onClick="FormSubmitData('http://52.34.59.23/WestChesterRideCorp/json.php',15)" class="myButton">Test</a></td></tr><tr><td colspan="2"><div id="response_testapi_15"></div> </td></tr></table></form></td></tr></table></section><section id="verifyPhoneCode"><H1>   verifyPhoneCode  </H1> <div class="btn_get"> GET</div><hr/> <table><tr><th> Name  </th><Td>   verifyPhoneCode  </td></tr><tr><th> Url  </th><Td>    json.php</td></tr><tr><th> Parameters  </th><Td><table><tr><th>Name</th><th>Type</th><th>Required</th><th>Description</th></tr><tr><td>tag</td><td>string</td><td>Yes</td><td></td></tr><tr><td>phoneNumber</td><td>string</td><td>Yes</td><td>any valid phone number (without plus '+') like 923348688265</td></tr><tr><td>phoneCode</td><td>string</td><td>Yes</td><td>code receives at mobile</td></tr></table></td></tr><tr><Th> Success  </th><Td><pre>{
+    "type": false,
+    "message": "Invalid verification code",
+    "phoneNumber": "923348688265",
+    "phoneCode": "645454"
+}</pre></td></tr><tr><Th> Error  </th><Td><pre>{
+    "type": false,
+    "message": "Invalid verification code",
+    "phoneNumber": "923348688265",
+    "phoneCode": null
+}</pre></td></tr><tr><Th> Description  </th><Td>  </td></tr><tr><Th> Test Api  </th><Td><form action="http://52.34.59.23/WestChesterRideCorp/json.php" method="GET" id="f_16" enctype="multipart/form-data"><table><input type="hidden" name="url" value="http://52.34.59.23/WestChesterRideCorp/json.php" ><input type="hidden" name="method" value="GET" ><tr><th>Tag</th><Td><input type="text" readonly name="tag" value="verifyPhoneCode" ></td></tr><tr><th>PhoneNumber</th><Td><input type="text" name="phoneNumber" value="923348688265" ></td></tr><tr><th>PhoneCode</th><Td><input type="text" name="phoneCode" value="645454" ></td></tr><tr><td colspan="2"><a onClick="FormSubmitData('http://52.34.59.23/WestChesterRideCorp/json.php',16)" class="myButton">Test</a></td></tr><tr><td colspan="2"><div id="response_testapi_16"></div> </td></tr></table></form></td></tr></table></section><section id="driver_register"><H1>   driver_register  </H1> <div class="btn_get"> GET</div><hr/> <table><tr><th> Name  </th><Td>   driver_register  </td></tr><tr><th> Url  </th><Td>    json.php</td></tr><tr><th> Parameters  </th><Td><table><tr><th>Name</th><th>Type</th><th>Required</th><th>Description</th></tr><tr><td>tag</td><td>string</td><td>Yes</td><td></td></tr><tr><td>txtb_name</td><td>string</td><td>Yes</td><td>Driver User name</td></tr><tr><td>txtb_email</td><td>string</td><td>Yes</td><td>any valid passenger email</td></tr><tr><td>upassword</td><td>string</td><td>Yes</td><td>driver Password</td></tr><tr><td>cpassword</td><td>string</td><td>Yes</td><td>confirm_password</td></tr><tr><td>phone_no</td><td>string</td><td>Yes</td><td>driver Phone No</td></tr><tr><td>professional_id_number</td><td>int</td><td>Yes</td><td>driver card number</td></tr><tr><td>address</td><td>string</td><td>Yes</td><td>road</td></tr><tr><td>car_brand</td><td>string</td><td>Yes</td><td>driver car Brand</td></tr><tr><td>model_year</td><td>int</td><td>Yes</td><td>driver car model year</td></tr><tr><td>plates_no</td><td>string</td><td>Yes</td><td>driver car plates no</td></tr><tr><td>licence_no</td><td>string</td><td>Yes</td><td>driver licence no</td></tr><tr><td>txtCountry</td><td>string</td><td>Yes</td><td>driver Country</td></tr><tr><td>txtCity</td><td>string</td><td>Yes</td><td>driver City</td></tr><tr><td>platform</td><td>string</td><td>Yes</td><td>iphone or android</td></tr><tr><td>regId</td><td>string</td><td>Yes</td><td>Driver device token/regId</td></tr><tr><td>file</td><td>file</td><td>Yes</td><td>Driver image file or image link</td></tr></table></td></tr><tr><Th> Success  </th><Td><pre>{
+    "type": false,
+    "message": "Email already exists"
+}</pre></td></tr><tr><Th> Error  </th><Td><pre>{
+    "type": false,
+    "message": "Email already exists"
+}</pre></td></tr><tr><Th> Description  </th><Td>  </td></tr><tr><Th> Test Api  </th><Td><form action="http://52.34.59.23/WestChesterRideCorp/json.php" method="GET" id="f_17" enctype="multipart/form-data"><table><input type="hidden" name="url" value="http://52.34.59.23/WestChesterRideCorp/json.php" ><input type="hidden" name="method" value="GET" ><tr><th>Tag</th><Td><input type="text" readonly name="tag" value="driver_register" ></td></tr><tr><th>Txtb_name</th><Td><input type="text" name="txtb_name" value="hammeed" ></td></tr><tr><th>Txtb_email</th><Td><input type="text" name="txtb_email" value="us129@yahoo.com" ></td></tr><tr><th>Upassword</th><Td><input type="text" name="upassword" value="7777744" ></td></tr><tr><th>Cpassword</th><Td><input type="text" name="cpassword" value="7777744" ></td></tr><tr><th>Phone_no</th><Td><input type="text" name="phone_no" value="923348688265" ></td></tr><tr><th>Professional_id_number</th><Td><input type="text" name="professional_id_number" value="51511" ></td></tr><tr><th>Address</th><Td><input type="text" name="address" value="jk" ></td></tr><tr><th>Car_brand</th><Td><input type="text" name="car_brand" value="toyota" ></td></tr><tr><th>Model_year</th><Td><input type="text" name="model_year" value="1982" ></td></tr><tr><th>Plates_no</th><Td><input type="text" name="plates_no" value="446565" ></td></tr><tr><th>Licence_no</th><Td><input type="text" name="licence_no" value="6545594dd" ></td></tr><tr><th>TxtCountry</th><Td><input type="text" name="txtCountry" value="pakistan" ></td></tr><tr><th>TxtCity</th><Td><input type="text" name="txtCity" value="islamabad" ></td></tr><tr><th>Platform</th><Td><input type="text" name="platform" value="iphone" ></td></tr><tr><th>RegId</th><Td><input type="text" name="regId" value="54545" ></td></tr><tr><th>File</th><Td><input type="file" name="file" value="driver.jpg" ></td></tr><tr><td colspan="2"><a onClick="FormSubmitData('http://52.34.59.23/WestChesterRideCorp/json.php',17)" class="myButton">Test</a></td></tr><tr><td colspan="2"><div id="response_testapi_17"></div> </td></tr></table></form></td></tr></table></section><section id="pass_register"><H1>   pass_register  </H1> <div class="btn_get"> GET</div><hr/> <table><tr><th> Name  </th><Td>   pass_register  </td></tr><tr><th> Url  </th><Td>    json.php</td></tr><tr><th> Parameters  </th><Td><table><tr><th>Name</th><th>Type</th><th>Required</th><th>Description</th></tr><tr><td>tag</td><td>string</td><td>Yes</td><td></td></tr><tr><td>login</td><td>string</td><td>Yes</td><td>facebook or account</td></tr><tr><td>txtb_name</td><td>string</td><td>Yes</td><td>passenger first name</td></tr><tr><td>txtb_email</td><td>string</td><td>Yes</td><td>any valid passenger email</td></tr><tr><td>txtb_password</td><td>string</td><td>Yes</td><td>passenger account password</td></tr><tr><td>txtb_contactno</td><td>string</td><td>Yes</td><td>passenger Contact No</td></tr><tr><td>txtb_gender</td><td>string</td><td>Yes</td><td>passenger gender</td></tr><tr><td>txtb_disability</td><td>string</td><td>Yes</td><td>passenger disability</td></tr><tr><td>regId</td><td>int</td><td>Yes</td><td>passenger deviceToken</td></tr><tr><td>platform</td><td>string</td><td>Yes</td><td>iphone or android</td></tr><tr><td>txtb_businesscard</td><td>string</td><td>Yes</td><td></td></tr><tr><td>accountTitle</td><td>string</td><td>Yes</td><td></td></tr><tr><td>sortCode</td><td>int</td><td>Yes</td><td></td></tr><tr><td>bankTitle</td><td>string</td><td>Yes</td><td></td></tr><tr><td>branchCode</td><td>string</td><td>Yes</td><td></td></tr><tr><td>branchAddress</td><td>string</td><td>Yes</td><td></td></tr><tr><td>file</td><td>string</td><td>Yes</td><td>passenger image file or file link</td></tr></table></td></tr><tr><Th> Success  </th><Td><pre>{
+    "type": false,
+    "message": "Email already exists"
+}</pre></td></tr><tr><Th> Error  </th><Td><pre>{
+    "type": false,
+    "message": "Email already exists"
+}</pre></td></tr><tr><Th> Description  </th><Td>  </td></tr><tr><Th> Test Api  </th><Td><form action="http://52.34.59.23/WestChesterRideCorp/json.php" method="GET" id="f_18" enctype="multipart/form-data"><table><input type="hidden" name="url" value="http://52.34.59.23/WestChesterRideCorp/json.php" ><input type="hidden" name="method" value="GET" ><tr><th>Tag</th><Td><input type="text" readonly name="tag" value="pass_register" ></td></tr><tr><th>Login</th><Td><input type="text" name="login" value="facebook" ></td></tr><tr><th>Txtb_name</th><Td><input type="text" name="txtb_name" value="aliakram" ></td></tr><tr><th>Txtb_email</th><Td><input type="text" name="txtb_email" value="us129@yahoo.com" ></td></tr><tr><th>Txtb_password</th><Td><input type="text" name="txtb_password" value="454545" ></td></tr><tr><th>Txtb_contactno</th><Td><input type="text" name="txtb_contactno" value="923348688265" ></td></tr><tr><th>Txtb_gender</th><Td><input type="text" name="txtb_gender" value="m" ></td></tr><tr><th>Txtb_disability</th><Td><input type="text" name="txtb_disability" value="none" ></td></tr><tr><th>RegId</th><Td><input type="text" name="regId" value="5858" ></td></tr><tr><th>Platform</th><Td><input type="text" name="platform" value="iphone" ></td></tr><tr><th>Txtb_businesscard</th><Td><input type="text" name="txtb_businesscard" value="5454" ></td></tr><tr><th>AccountTitle</th><Td><input type="text" name="accountTitle" value="alikram" ></td></tr><tr><th>SortCode</th><Td><input type="text" name="sortCode" value="1982" ></td></tr><tr><th>BankTitle</th><Td><input type="text" name="bankTitle" value="allied" ></td></tr><tr><th>BranchCode</th><Td><input type="text" name="branchCode" value="747" ></td></tr><tr><th>BranchAddress</th><Td><input type="text" name="branchAddress" value="jinnahsuper,islamabad" ></td></tr><tr><th>File</th><Td><input type="text" name="file" value="passengeraliakram.jpg" ></td></tr><tr><td colspan="2"><a onClick="FormSubmitData('http://52.34.59.23/WestChesterRideCorp/json.php',18)" class="myButton">Test</a></td></tr><tr><td colspan="2"><div id="response_testapi_18"></div> </td></tr></table></form></td></tr></table></section><section id="login"><H1>   login  </H1> <div class="btn_get"> GET</div><hr/> <table><tr><th> Name  </th><Td>   login  </td></tr><tr><th> Url  </th><Td>    json.php</td></tr><tr><th> Parameters  </th><Td><table><tr><th>Name</th><th>Type</th><th>Required</th><th>Description</th></tr><tr><td>tag</td><td>string</td><td>Yes</td><td></td></tr><tr><td>tag_type</td><td>int</td><td>Yes</td><td>passenger or driver</td></tr><tr><td>login</td><td>string</td><td>Yes</td><td>facebook or account</td></tr><tr><td>txtb_email</td><td>string</td><td>Yes</td><td>passenger account email address</td></tr><tr><td>txtb_password</td><td>string</td><td>Yes</td><td>passenger account password</td></tr><tr><td>device_type</td><td>string</td><td>Yes</td><td>iphone or android</td></tr></table></td></tr><tr><Th> Success  </th><Td><pre>{
+    "type": false,
+    "message": "Invalid Username OR password"
+}</pre></td></tr><tr><Th> Error  </th><Td><pre>{
+    "type": false,
+    "message": "Invalid Username OR password"
+}</pre></td></tr><tr><Th> Description  </th><Td>  </td></tr><tr><Th> Test Api  </th><Td><form action="http://52.34.59.23/WestChesterRideCorp/json.php" method="GET" id="f_19" enctype="multipart/form-data"><table><input type="hidden" name="url" value="http://52.34.59.23/WestChesterRideCorp/json.php" ><input type="hidden" name="method" value="GET" ><tr><th>Tag</th><Td><input type="text" readonly name="tag" value="login" ></td></tr><tr><th>Tag_type</th><Td><input type="text" name="tag_type" value="passenger" ></td></tr><tr><th>Login</th><Td><input type="text" name="login" value="facebook" ></td></tr><tr><th>Txtb_email</th><Td><input type="text" name="txtb_email" value="us130@yahoo.com" ></td></tr><tr><th>Txtb_password</th><Td><input type="text" name="txtb_password" value="454545" ></td></tr><tr><th>Device_type</th><Td><input type="text" name="device_type" value="iphone" ></td></tr><tr><td colspan="2"><a onClick="FormSubmitData('http://52.34.59.23/WestChesterRideCorp/json.php',19)" class="myButton">Test</a></td></tr><tr><td colspan="2"><div id="response_testapi_19"></div> </td></tr></table></form></td></tr></table></section><section id="update_user_inf"><H1>   update_user_inf  </H1> <div class="btn_get"> GET</div><hr/> <table><tr><th> Name  </th><Td>   update_user_inf  </td></tr><tr><th> Url  </th><Td>    json.php</td></tr><tr><th> Parameters  </th><Td><table><tr><th>Name</th><th>Type</th><th>Required</th><th>Description</th></tr><tr><td>tag</td><td>string</td><td>Yes</td><td></td></tr><tr><td>txtb_email</td><td>string</td><td>Yes</td><td>passenger/driver account email address</td></tr><tr><td>txtb_name</td><td>string</td><td>Yes</td><td>passenger/driver account Name/Title</td></tr><tr><td>txtb_contactno</td><td>string</td><td>Yes</td><td>passenger/driver account Contact Number</td></tr><tr><td>txtb_gender</td><td>string</td><td>Yes</td><td>M/F</td></tr><tr><td>txtb_disability</td><td>string</td><td>Yes</td><td>users disability</td></tr><tr><td>old_password</td><td>string</td><td>Yes</td><td>users old password</td></tr><tr><td>txtb_password</td><td>string</td><td>Yes</td><td>users new password</td></tr><tr><td>file</td><td>string</td><td>Yes</td><td>passenger image file</td></tr></table></td></tr><tr><Th> Success  </th><Td><pre>{
+    "type": false,
+    "message": "Invalid tag found"
+}</pre></td></tr><tr><Th> Error  </th><Td><pre>{
+    "type": false,
+    "message": "Invalid tag found"
+}</pre></td></tr><tr><Th> Description  </th><Td>  </td></tr><tr><Th> Test Api  </th><Td><form action="http://52.34.59.23/WestChesterRideCorp/json.php" method="GET" id="f_20" enctype="multipart/form-data"><table><input type="hidden" name="url" value="http://52.34.59.23/WestChesterRideCorp/json.php" ><input type="hidden" name="method" value="GET" ><tr><th>Tag</th><Td><input type="text" readonly name="tag" value="update_user_inf" ></td></tr><tr><th>Txtb_email</th><Td><input type="text" name="txtb_email" value="us129@yahoo.com" ></td></tr><tr><th>Txtb_name</th><Td><input type="text" name="txtb_name" value="aliakram" ></td></tr><tr><th>Txtb_contactno</th><Td><input type="text" name="txtb_contactno" value="923348688265" ></td></tr><tr><th>Txtb_gender</th><Td><input type="text" name="txtb_gender" value="m" ></td></tr><tr><th>Txtb_disability</th><Td><input type="text" name="txtb_disability" value="none" ></td></tr><tr><th>Old_password</th><Td><input type="text" name="old_password" value="5525222" ></td></tr><tr><th>Txtb_password</th><Td><input type="text" name="txtb_password" value="454545" ></td></tr><tr><th>File</th><Td><input type="text" name="file" value="passengeraliakram.jpg" ></td></tr><tr><td colspan="2"><a onClick="FormSubmitData('http://52.34.59.23/WestChesterRideCorp/json.php',20)" class="myButton">Test</a></td></tr><tr><td colspan="2"><div id="response_testapi_20"></div> </td></tr></table></form></td></tr></table></section><section id="update_driver_info"><H1>   update_driver_info   </H1> <div class="btn_get"> GET</div><hr/> <table><tr><th> Name  </th><Td>   update_driver_info   </td></tr><tr><th> Url  </th><Td>    json.php</td></tr><tr><th> Parameters  </th><Td><table><tr><th>Name</th><th>Type</th><th>Required</th><th>Description</th></tr><tr><td>tag</td><td>string</td><td>Yes</td><td></td></tr><tr><td>txtb_email</td><td>string</td><td>Yes</td><td>passenger/driver account email address</td></tr><tr><td>txtb_name</td><td>string</td><td>Yes</td><td>passenger/driver account Name/Title</td></tr><tr><td>txtb_contactno</td><td>string</td><td>Yes</td><td>passenger/driver account Contact Number</td></tr><tr><td>txtb_gender</td><td>string</td><td>Yes</td><td>M/F</td></tr><tr><td>txtb_password</td><td>string</td><td>Yes</td><td>users new password</td></tr><tr><td>txtb_address</td><td>string</td><td>Yes</td><td>colony</td></tr><tr><td>txtb_city</td><td>string</td><td>Yes</td><td>driver City</td></tr><tr><td>txtb_country</td><td>string</td><td>Yes</td><td></td></tr><tr><td>txtb_brand</td><td>string</td><td>Yes</td><td></td></tr><tr><td>txtb_model</td><td>string</td><td>Yes</td><td></td></tr><tr><td>txtb_vtype</td><td>string</td><td>Yes</td><td></td></tr><tr><td>txtb_year</td><td>string</td><td>Yes</td><td></td></tr><tr><td>txtb_businesscard</td><td>string</td><td>Yes</td><td></td></tr><tr><td>accountTitle</td><td>string</td><td>Yes</td><td></td></tr><tr><td>bankTitle</td><td>string</td><td>Yes</td><td></td></tr><tr><td>branchCode</td><td>string</td><td>Yes</td><td></td></tr><tr><td>branchAddress</td><td>string</td><td>Yes</td><td></td></tr><tr><td>str_lang</td><td>string</td><td>Yes</td><td>english|arabic|dutch</td></tr><tr><td>lang_status</td><td>string</td><td>Yes</td><td>n|y|y|y|n|y|n</td></tr><tr><td>str_serv</td><td>string</td><td>Yes</td><td>wifi|baby Seats|Charger</td></tr><tr><td>serv_status</td><td>string</td><td>Yes</td><td>n|y|y|y|n|y|n</td></tr></table></td></tr><tr><Th> Success  </th><Td><pre>{
+    "type": false,
+    "message": "Invalid tag found"
+}</pre></td></tr><tr><Th> Error  </th><Td><pre>{
+    "type": false,
+    "message": "Invalid tag found"
+}</pre></td></tr><tr><Th> Description  </th><Td>  </td></tr><tr><Th> Test Api  </th><Td><form action="http://52.34.59.23/WestChesterRideCorp/json.php" method="GET" id="f_21" enctype="multipart/form-data"><table><input type="hidden" name="url" value="http://52.34.59.23/WestChesterRideCorp/json.php" ><input type="hidden" name="method" value="GET" ><tr><th>Tag</th><Td><input type="text" readonly name="tag" value="update_user_inf" ></td></tr><tr><th>Txtb_email</th><Td><input type="text" name="txtb_email" value="us129@yahoo.com" ></td></tr><tr><th>Txtb_name</th><Td><input type="text" name="txtb_name" value="aliakram" ></td></tr><tr><th>Txtb_contactno</th><Td><input type="text" name="txtb_contactno" value="923348688265" ></td></tr><tr><th>Txtb_gender</th><Td><input type="text" name="txtb_gender" value="m" ></td></tr><tr><th>Txtb_password</th><Td><input type="text" name="txtb_password" value="454545" ></td></tr><tr><th>Txtb_address</th><Td><input type="text" name="txtb_address" value="jinnah" ></td></tr><tr><th>Txtb_city</th><Td><input type="text" name="txtb_city" value="islamabad" ></td></tr><tr><th>Txtb_country</th><Td><input type="text" name="txtb_country" value="rawalpindi" ></td></tr><tr><th>Txtb_brand</th><Td><input type="text" name="txtb_brand" value="toyota" ></td></tr><tr><th>Txtb_model</th><Td><input type="text" name="txtb_model" value="corolla" ></td></tr><tr><th>Txtb_vtype</th><Td><input type="text" name="txtb_vtype" value="dsd" ></td></tr><tr><th>Txtb_year</th><Td><input type="text" name="txtb_year" value="1989" ></td></tr><tr><th>Txtb_businesscard</th><Td><input type="text" name="txtb_businesscard" value="5454" ></td></tr><tr><th>AccountTitle</th><Td><input type="text" name="accountTitle" value="alikram" ></td></tr><tr><th>BankTitle</th><Td><input type="text" name="bankTitle" value="allied" ></td></tr><tr><th>BranchCode</th><Td><input type="text" name="branchCode" value="747" ></td></tr><tr><th>BranchAddress</th><Td><input type="text" name="branchAddress" value="jinnahsuper,islamabad" ></td></tr><tr><th>Str_lang</th><Td><input type="text" name="str_lang" value="english" ></td></tr><tr><th>Lang_status</th><Td><input type="text" name="lang_status" value="n" ></td></tr><tr><th>Str_serv</th><Td><input type="text" name="str_serv" value="wifi" ></td></tr><tr><th>Serv_status</th><Td><input type="text" name="serv_status" value="n" ></td></tr><tr><td colspan="2"><a onClick="FormSubmitData('http://52.34.59.23/WestChesterRideCorp/json.php',21)" class="myButton">Test</a></td></tr><tr><td colspan="2"><div id="response_testapi_21"></div> </td></tr></table></form></td></tr></table></section><section id="on_click_boarding"><H1>   on_click_boarding  </H1> <div class="btn_get"> GET</div><hr/> <table><tr><th> Name  </th><Td>   on_click_boarding  </td></tr><tr><th> Url  </th><Td>    json.php</td></tr><tr><th> Parameters  </th><Td><table><tr><th>Name</th><th>Type</th><th>Required</th><th>Description</th></tr><tr><td>tag</td><td>string</td><td>Yes</td><td></td></tr><tr><td>email</td><td>string</td><td>Yes</td><td>driver account email</td></tr><tr><td>status</td><td>string</td><td>Yes</td><td>available or not available</td></tr></table></td></tr><tr><Th> Success  </th><Td><pre>{
+    "type": true,
+    "message": "Account status updated"
+}</pre></td></tr><tr><Th> Error  </th><Td><pre>{
+    "type": true,
+    "message": "Account status updated"
+}</pre></td></tr><tr><Th> Description  </th><Td>  </td></tr><tr><Th> Test Api  </th><Td><form action="http://52.34.59.23/WestChesterRideCorp/json.php" method="GET" id="f_22" enctype="multipart/form-data"><table><input type="hidden" name="url" value="http://52.34.59.23/WestChesterRideCorp/json.php" ><input type="hidden" name="method" value="GET" ><tr><th>Tag</th><Td><input type="text" readonly name="tag" value="on_click_boarding" ></td></tr><tr><th>Email</th><Td><input type="text" name="email" value="us132@yahoo.com" ></td></tr><tr><th>Status</th><Td><input type="text" name="status" value="available" ></td></tr><tr><td colspan="2"><a onClick="FormSubmitData('http://52.34.59.23/WestChesterRideCorp/json.php',22)" class="myButton">Test</a></td></tr><tr><td colspan="2"><div id="response_testapi_22"></div> </td></tr></table></form></td></tr></table></section><section id="logout"><H1>   logout  </H1> <div class="btn_get"> GET</div><hr/> <table><tr><th> Name  </th><Td>   logout  </td></tr><tr><th> Url  </th><Td>    json.php</td></tr><tr><th> Parameters  </th><Td><table><tr><th>Name</th><th>Type</th><th>Required</th><th>Description</th></tr><tr><td>tag</td><td>string</td><td>Yes</td><td></td></tr><tr><td>email</td><td>string</td><td>Yes</td><td>passenger/driver account email address</td></tr></table></td></tr><tr><Th> Success  </th><Td><pre>{
+    "type": true,
+    "message": "Logout successfully"
+}</pre></td></tr><tr><Th> Error  </th><Td><pre>{
+    "type": false,
+    "message": ""
+}</pre></td></tr><tr><Th> Description  </th><Td>  </td></tr><tr><Th> Test Api  </th><Td><form action="http://52.34.59.23/WestChesterRideCorp/json.php" method="GET" id="f_23" enctype="multipart/form-data"><table><input type="hidden" name="url" value="http://52.34.59.23/WestChesterRideCorp/json.php" ><input type="hidden" name="method" value="GET" ><tr><th>Tag</th><Td><input type="text" readonly name="tag" value="logout" ></td></tr><tr><th>Email</th><Td><input type="text" name="email" value="us133@yahoo.com" ></td></tr><tr><td colspan="2"><a onClick="FormSubmitData('http://52.34.59.23/WestChesterRideCorp/json.php',23)" class="myButton">Test</a></td></tr><tr><td colspan="2"><div id="response_testapi_23"></div> </td></tr></table></form></td></tr></table></section><section id="get_driver"><H1>   get_driver</H1> <div class="btn_get"> GET</div><hr/> <table><tr><th> Name  </th><Td>   get_driver</td></tr><tr><th> Url  </th><Td>    json.php</td></tr><tr><th> Parameters  </th><Td><table><tr><th>Name</th><th>Type</th><th>Required</th><th>Description</th></tr><tr><td>txtb_did</td><td>string</td><td>Yes</td><td>driver account email address</td></tr><tr><td>txtb_dlocations</td><td>string</td><td>Yes</td><td>passenger location like 73.252525,74.639685</td></tr></table></td></tr><tr><Th> Success  </th><Td><pre>{
+    "type": false,
+    "message": "NO tag found"
+}</pre></td></tr><tr><Th> Error  </th><Td><pre>{
+    "type": false,
+    "message": "NO tag found"
+}</pre></td></tr><tr><Th> Description  </th><Td>  </td></tr><tr><Th> Test Api  </th><Td><form action="http://52.34.59.23/WestChesterRideCorp/json.php" method="GET" id="f_24" enctype="multipart/form-data"><table><input type="hidden" name="url" value="http://52.34.59.23/WestChesterRideCorp/json.php" ><input type="hidden" name="method" value="GET" ><tr><th>Txtb_did</th><Td><input type="text" name="txtb_did" value="us134@yahoo.com" ></td></tr><tr><th>Txtb_dlocations</th><Td><input type="text" name="txtb_dlocations" value="73.252525" ></td></tr><tr><td colspan="2"><a onClick="FormSubmitData('http://52.34.59.23/WestChesterRideCorp/json.php',24)" class="myButton">Test</a></td></tr><tr><td colspan="2"><div id="response_testapi_24"></div> </td></tr></table></form></td></tr></table></section><section id="get_passenger"><H1>   get_passenger</H1> <div class="btn_get"> GET</div><hr/> <table><tr><th> Name  </th><Td>   get_passenger</td></tr><tr><th> Url  </th><Td>    json.php</td></tr><tr><th> Parameters  </th><Td><table><tr><th>Name</th><th>Type</th><th>Required</th><th>Description</th></tr><tr><td>txtb_pid</td><td>string</td><td>Yes</td><td>passenger account email address</td></tr></table></td></tr><tr><Th> Success  </th><Td><pre>{
+    "type": false,
+    "message": "NO tag found"
+}</pre></td></tr><tr><Th> Error  </th><Td><pre>{
+    "type": false,
+    "message": "NO tag found"
+}</pre></td></tr><tr><Th> Description  </th><Td>  </td></tr><tr><Th> Test Api  </th><Td><form action="http://52.34.59.23/WestChesterRideCorp/json.php" method="GET" id="f_25" enctype="multipart/form-data"><table><input type="hidden" name="url" value="http://52.34.59.23/WestChesterRideCorp/json.php" ><input type="hidden" name="method" value="GET" ><tr><th>Txtb_pid</th><Td><input type="text" name="txtb_pid" value="us135@yahoo.com" ></td></tr><tr><td colspan="2"><a onClick="FormSubmitData('http://52.34.59.23/WestChesterRideCorp/json.php',25)" class="myButton">Test</a></td></tr><tr><td colspan="2"><div id="response_testapi_25"></div> </td></tr></table></form></td></tr></table></section><section id="update_driver_location"><H1>   update_driver_location</H1> <div class="btn_get"> GET</div><hr/> <table><tr><th> Name  </th><Td>   update_driver_location</td></tr><tr><th> Url  </th><Td>    json.php</td></tr><tr><th> Parameters  </th><Td><table><tr><th>Name</th><th>Type</th><th>Required</th><th>Description</th></tr><tr><td>txtb_email</td><td>string</td><td>Yes</td><td>driver account email address</td></tr><tr><td>txtb_locations</td><td>string</td><td>Yes</td><td>driver</td></tr><tr><td>journey</td><td>string</td><td>Yes</td><td>0 or 1</td></tr></table></td></tr><tr><Th> Success  </th><Td><pre>{
+    "type": false,
+    "message": "NO tag found"
+}</pre></td></tr><tr><Th> Error  </th><Td><pre>{
+    "type": false,
+    "message": "NO tag found"
+}</pre></td></tr><tr><Th> Description  </th><Td>  </td></tr><tr><Th> Test Api  </th><Td><form action="http://52.34.59.23/WestChesterRideCorp/json.php" method="GET" id="f_26" enctype="multipart/form-data"><table><input type="hidden" name="url" value="http://52.34.59.23/WestChesterRideCorp/json.php" ><input type="hidden" name="method" value="GET" ><tr><th>Txtb_email</th><Td><input type="text" name="txtb_email" value="us136@yahoo.com" ></td></tr><tr><th>Txtb_locations</th><Td><input type="text" name="txtb_locations" value="lat,lng" ></td></tr><tr><th>Journey</th><Td><input type="text" name="journey" value="0" ></td></tr><tr><td colspan="2"><a onClick="FormSubmitData('http://52.34.59.23/WestChesterRideCorp/json.php',26)" class="myButton">Test</a></td></tr><tr><td colspan="2"><div id="response_testapi_26"></div> </td></tr></table></form></td></tr></table></section><section id="update_passenger_location"><H1>   update_passenger_location</H1> <div class="btn_get"> GET</div><hr/> <table><tr><th> Name  </th><Td>   update_passenger_location</td></tr><tr><th> Url  </th><Td>    json.php</td></tr><tr><th> Parameters  </th><Td><table><tr><th>Name</th><th>Type</th><th>Required</th><th>Description</th></tr><tr><td>txtb_email</td><td>string</td><td>Yes</td><td>passenger account email</td></tr><tr><td>txtb_latit</td><td>string</td><td>Yes</td><td>passenger current location latitude</td></tr><tr><td>txtb_longi</td><td>string</td><td>Yes</td><td>passenger current location longitude</td></tr></table></td></tr><tr><Th> Success  </th><Td><pre>{
+    "type": false,
+    "message": "NO tag found"
+}</pre></td></tr><tr><Th> Error  </th><Td><pre>{
+    "type": false,
+    "message": "NO tag found"
+}</pre></td></tr><tr><Th> Description  </th><Td>  </td></tr><tr><Th> Test Api  </th><Td><form action="http://52.34.59.23/WestChesterRideCorp/json.php" method="GET" id="f_27" enctype="multipart/form-data"><table><input type="hidden" name="url" value="http://52.34.59.23/WestChesterRideCorp/json.php" ><input type="hidden" name="method" value="GET" ><tr><th>Txtb_email</th><Td><input type="text" name="txtb_email" value="us137@yahoo.com" ></td></tr><tr><th>Txtb_latit</th><Td><input type="text" name="txtb_latit" value="33.445566" ></td></tr><tr><th>Txtb_longi</th><Td><input type="text" name="txtb_longi" value="73.665544" ></td></tr><tr><td colspan="2"><a onClick="FormSubmitData('http://52.34.59.23/WestChesterRideCorp/json.php',27)" class="myButton">Test</a></td></tr><tr><td colspan="2"><div id="response_testapi_27"></div> </td></tr></table></form></td></tr></table></section><section id="update_passenger_location2"><H1>   update_passenger_location2</H1> <div class="btn_get"> GET</div><hr/> <table><tr><th> Name  </th><Td>   update_passenger_location2</td></tr><tr><th> Url  </th><Td>    json.php</td></tr><tr><th> Parameters  </th><Td><table><tr><th>Name</th><th>Type</th><th>Required</th><th>Description</th></tr><tr><td>txtb_email</td><td>string</td><td>Yes</td><td>passenger account email</td></tr><tr><td>origins</td><td>string</td><td>Yes</td><td>latitude of pick-up point</td></tr><tr><td>origine</td><td>string</td><td>Yes</td><td>longitude of pick-up point</td></tr><tr><td>destinations</td><td>string</td><td>Yes</td><td>latitude of drop-off point</td></tr><tr><td>destinatione</td><td>string</td><td>Yes</td><td>longitude of drop-off point</td></tr><tr><td>circle</td><td>string</td><td>Yes</td><td>radius of the search from passenger current location</td></tr><tr><td>start_address</td><td>string</td><td>Yes</td><td>of</td></tr><tr><td>end_address</td><td>string</td><td>Yes</td><td>address of the drop-off point</td></tr><tr><td>txtb_vehType</td><td>string</td><td>Yes</td><td>vehicle type used by driver</td></tr></table></td></tr><tr><Th> Success  </th><Td><pre>{
+    "type": false,
+    "message": "NO tag found"
+}</pre></td></tr><tr><Th> Error  </th><Td><pre>{
+    "type": false,
+    "message": "NO tag found"
+}</pre></td></tr><tr><Th> Description  </th><Td>  </td></tr><tr><Th> Test Api  </th><Td><form action="http://52.34.59.23/WestChesterRideCorp/json.php" method="GET" id="f_28" enctype="multipart/form-data"><table><input type="hidden" name="url" value="http://52.34.59.23/WestChesterRideCorp/json.php" ><input type="hidden" name="method" value="GET" ><tr><th>Txtb_email</th><Td><input type="text" name="txtb_email" value="us138@yahoo.com" ></td></tr><tr><th>Origins</th><Td><input type="text" name="origins" value="33.445566" ></td></tr><tr><th>Origine</th><Td><input type="text" name="origine" value="73.665544" ></td></tr><tr><th>Destinations</th><Td><input type="text" name="destinations" value="33.445566" ></td></tr><tr><th>Destinatione</th><Td><input type="text" name="destinatione" value="73.665544" ></td></tr><tr><th>Circle</th><Td><input type="text" name="circle" value="30" ></td></tr><tr><th>Start_address</th><Td><input type="text" name="start_address" value="dsasdasd"address" ></td></tr><tr><th>End_address</th><Td><input type="text" name="end_address" value="asadad" ></td></tr><tr><th>Txtb_vehType</th><Td><input type="text" name="txtb_vehType" value="4x4" ></td></tr><tr><td colspan="2"><a onClick="FormSubmitData('http://52.34.59.23/WestChesterRideCorp/json.php',28)" class="myButton">Test</a></td></tr><tr><td colspan="2"><div id="response_testapi_28"></div> </td></tr></table></form></td></tr></table></section><section id="call_driver_booking"><H1>   call_driver_booking</H1> <div class="btn_get"> GET</div><hr/> <table><tr><th> Name  </th><Td>   call_driver_booking</td></tr><tr><th> Url  </th><Td>    json.php</td></tr><tr><th> Parameters  </th><Td><table><tr><th>Name</th><th>Type</th><th>Required</th><th>Description</th></tr><tr><td>booking_type</td><td>string</td><td>Yes</td><td>Normal_Booking</td></tr><tr><td>txtb_email</td><td>string</td><td>Yes</td><td>the passenger account email</td></tr><tr><td>refference_id</td><td>int</td><td>Yes</td><td>reference id which reference to details about pick-up and drop-off point</td></tr><tr><td>txtb_note</td><td>string</td><td>Yes</td><td>passenger note to driver</td></tr><tr><td>passcount</td><td>string</td><td>Yes</td><td>passgener counter</td></tr></table></td></tr><tr><Th> Success  </th><Td><pre>{
+    "type": false,
+    "message": "NO tag found"
+}</pre></td></tr><tr><Th> Error  </th><Td><pre>{
+    "type": false,
+    "message": "NO tag found"
+}</pre></td></tr><tr><Th> Description  </th><Td>  </td></tr><tr><Th> Test Api  </th><Td><form action="http://52.34.59.23/WestChesterRideCorp/json.php" method="GET" id="f_29" enctype="multipart/form-data"><table><input type="hidden" name="url" value="http://52.34.59.23/WestChesterRideCorp/json.php" ><input type="hidden" name="method" value="GET" ><tr><th>Booking_type</th><Td><input type="text" name="booking_type" value="Normal_Booking" ></td></tr><tr><th>Txtb_email</th><Td><input type="text" name="txtb_email" value="us139@yahoo.com" ></td></tr><tr><th>Refference_id</th><Td><input type="text" name="refference_id" value="55" ></td></tr><tr><th>Txtb_note</th><Td><input type="text" name="txtb_note" value="asdasd" ></td></tr><tr><th>Passcount</th><Td><input type="text" name="passcount" value="6" ></td></tr><tr><td colspan="2"><a onClick="FormSubmitData('http://52.34.59.23/WestChesterRideCorp/json.php',29)" class="myButton">Test</a></td></tr><tr><td colspan="2"><div id="response_testapi_29"></div> </td></tr></table></form></td></tr></table></section><section id="call_driver_booking2"><H1>   call_driver_booking2</H1> <div class="btn_get"> GET</div><hr/> <table><tr><th> Name  </th><Td>   call_driver_booking2</td></tr><tr><th> Url  </th><Td>    json.php</td></tr><tr><th> Parameters  </th><Td><table><tr><th>Name</th><th>Type</th><th>Required</th><th>Description</th></tr><tr><td>booking_type</td><td>string</td><td>Yes</td><td>Cancel_driver_call</td></tr><tr><td>txtb_email</td><td>string</td><td>Yes</td><td>the passenger account email</td></tr><tr><td>txtb_did</td><td>string</td><td>Yes</td><td>driver id</td></tr><tr><td>refference_id</td><td>int</td><td>Yes</td><td>reference id which reference to details about pick-up and drop-off point</td></tr></table></td></tr><tr><Th> Success  </th><Td><pre>{
+    "type": false,
+    "message": "NO tag found"
+}</pre></td></tr><tr><Th> Error  </th><Td><pre>{
+    "type": false,
+    "message": "NO tag found"
+}</pre></td></tr><tr><Th> Description  </th><Td>  </td></tr><tr><Th> Test Api  </th><Td><form action="http://52.34.59.23/WestChesterRideCorp/json.php" method="GET" id="f_30" enctype="multipart/form-data"><table><input type="hidden" name="url" value="http://52.34.59.23/WestChesterRideCorp/json.php" ><input type="hidden" name="method" value="GET" ><tr><th>Booking_type</th><Td><input type="text" name="booking_type" value="Cancel_driver_call" ></td></tr><tr><th>Txtb_email</th><Td><input type="text" name="txtb_email" value="us140@yahoo.com" ></td></tr><tr><th>Txtb_did</th><Td><input type="text" name="txtb_did" value="5" ></td></tr><tr><th>Refference_id</th><Td><input type="text" name="refference_id" value="55" ></td></tr><tr><td colspan="2"><a onClick="FormSubmitData('http://52.34.59.23/WestChesterRideCorp/json.php',30)" class="myButton">Test</a></td></tr><tr><td colspan="2"><div id="response_testapi_30"></div> </td></tr></table></form></td></tr></table></section><section id="get_normal_booking_details"><H1>   get_normal_booking_details</H1> <div class="btn_get"> GET</div><hr/> <table><tr><th> Name  </th><Td>   get_normal_booking_details</td></tr><tr><th> Url  </th><Td>    json.php</td></tr><tr><th> Parameters  </th><Td><table><tr><th>Name</th><th>Type</th><th>Required</th><th>Description</th></tr><tr><td>refference_id</td><td>int</td><td>Yes</td><td>reference id which reference to details about pick-up and drop-off point</td></tr><tr><td>txtb_dlocations</td><td>string</td><td>Yes</td><td>driver location lat long with comma separated</td></tr></table></td></tr><tr><Th> Success  </th><Td><pre>{
+    "type": false,
+    "message": "NO tag found"
+}</pre></td></tr><tr><Th> Error  </th><Td><pre>{
+    "type": false,
+    "message": "NO tag found"
+}</pre></td></tr><tr><Th> Description  </th><Td>  </td></tr><tr><Th> Test Api  </th><Td><form action="http://52.34.59.23/WestChesterRideCorp/json.php" method="GET" id="f_31" enctype="multipart/form-data"><table><input type="hidden" name="url" value="http://52.34.59.23/WestChesterRideCorp/json.php" ><input type="hidden" name="method" value="GET" ><tr><th>Refference_id</th><Td><input type="text" name="refference_id" value="55" ></td></tr><tr><th>Txtb_dlocations</th><Td><input type="text" name="txtb_dlocations" value="33.445566,73.665544" ></td></tr><tr><td colspan="2"><a onClick="FormSubmitData('http://52.34.59.23/WestChesterRideCorp/json.php',31)" class="myButton">Test</a></td></tr><tr><td colspan="2"><div id="response_testapi_31"></div> </td></tr></table></form></td></tr></table></section><section id="driver_response_to_passenger_call"><H1>   driver_response_to_passenger_call</H1> <div class="btn_get"> GET</div><hr/> <table><tr><th> Name  </th><Td>   driver_response_to_passenger_call</td></tr><tr><th> Url  </th><Td>    json.php</td></tr><tr><th> Parameters  </th><Td><table><tr><th>Name</th><th>Type</th><th>Required</th><th>Description</th></tr><tr><td>txtb_pid</td><td>string</td><td>Yes</td><td>us141@yahoo.com</td></tr><tr><td>txtb_did</td><td>string</td><td>Yes</td><td>us141@yahoo.com</td></tr><tr><td>refference_id</td><td>int</td><td>Yes</td><td>the call reference id</td></tr><tr><td>travel_time</td><td>string</td><td>Yes</td><td>driver reach time to passenger</td></tr></table></td></tr><tr><Th> Success  </th><Td><pre>{
+    "type": false,
+    "message": "NO tag found"
+}</pre></td></tr><tr><Th> Error  </th><Td><pre>{
+    "type": false,
+    "message": "NO tag found"
+}</pre></td></tr><tr><Th> Description  </th><Td>  </td></tr><tr><Th> Test Api  </th><Td><form action="http://52.34.59.23/WestChesterRideCorp/json.php" method="GET" id="f_32" enctype="multipart/form-data"><table><input type="hidden" name="url" value="http://52.34.59.23/WestChesterRideCorp/json.php" ><input type="hidden" name="method" value="GET" ><tr><th>Txtb_pid</th><Td><input type="text" name="txtb_pid" value="5" ></td></tr><tr><th>Txtb_did</th><Td><input type="text" name="txtb_did" value="5" ></td></tr><tr><th>Refference_id</th><Td><input type="text" name="refference_id" value="1430" ></td></tr><tr><th>Travel_time</th><Td><input type="text" name="travel_time" value="5" ></td></tr><tr><td colspan="2"><a onClick="FormSubmitData('http://52.34.59.23/WestChesterRideCorp/json.php',32)" class="myButton">Test</a></td></tr><tr><td colspan="2"><div id="response_testapi_32"></div> </td></tr></table></form></td></tr></table></section><section id="passenger_response_to_driver_call"><H1>   passenger_response_to_driver_call</H1> <div class="btn_get"> GET</div><hr/> <table><tr><th> Name  </th><Td>   passenger_response_to_driver_call</td></tr><tr><th> Url  </th><Td>    json.php</td></tr><tr><th> Parameters  </th><Td><table><tr><th>Name</th><th>Type</th><th>Required</th><th>Description</th></tr><tr><td>txtb_email</td><td>string</td><td>Yes</td><td>passenger account email</td></tr><tr><td>txtb_did</td><td>string</td><td>Yes</td><td>us141@yahoo.com</td></tr><tr><td>refference_id</td><td>int</td><td>Yes</td><td>the call reference id</td></tr><tr><td>drivers_ids</td><td>string</td><td>Yes</td><td>1,2</td></tr></table></td></tr><tr><Th> Success  </th><Td><pre>{
+    "type": false,
+    "message": "NO tag found"
+}</pre></td></tr><tr><Th> Error  </th><Td><pre>{
+    "type": false,
+    "message": "NO tag found"
+}</pre></td></tr><tr><Th> Description  </th><Td>  </td></tr><tr><Th> Test Api  </th><Td><form action="http://52.34.59.23/WestChesterRideCorp/json.php" method="GET" id="f_33" enctype="multipart/form-data"><table><input type="hidden" name="url" value="http://52.34.59.23/WestChesterRideCorp/json.php" ><input type="hidden" name="method" value="GET" ><tr><th>Txtb_email</th><Td><input type="text" name="txtb_email" value="us140@yahoo.com" ></td></tr><tr><th>Txtb_did</th><Td><input type="text" name="txtb_did" value="5" ></td></tr><tr><th>Refference_id</th><Td><input type="text" name="refference_id" value="1430" ></td></tr><tr><th>Drivers_ids</th><Td><input type="text" name="drivers_ids" value="5" ></td></tr><tr><td colspan="2"><a onClick="FormSubmitData('http://52.34.59.23/WestChesterRideCorp/json.php',33)" class="myButton">Test</a></td></tr><tr><td colspan="2"><div id="response_testapi_33"></div> </td></tr></table></form></td></tr></table></section><section id="passenger_start_trip"><H1>   passenger_start_trip</H1> <div class="btn_get"> GET</div><hr/> <table><tr><th> Name  </th><Td>   passenger_start_trip</td></tr><tr><th> Url  </th><Td>    json.php</td></tr><tr><th> Parameters  </th><Td><table><tr><th>Name</th><th>Type</th><th>Required</th><th>Description</th></tr><tr><td>txtb_email</td><td>string</td><td>Yes</td><td>passenger account email</td></tr><tr><td>txtb_did</td><td>string</td><td>Yes</td><td>us141@yahoo.com</td></tr><tr><td>refference_id</td><td>int</td><td>Yes</td><td>the call reference id</td></tr></table></td></tr><tr><Th> Success  </th><Td><pre>{
+    "type": false,
+    "message": "NO tag found"
+}</pre></td></tr><tr><Th> Error  </th><Td><pre>{
+    "type": false,
+    "message": "NO tag found"
+}</pre></td></tr><tr><Th> Description  </th><Td>  </td></tr><tr><Th> Test Api  </th><Td><form action="http://52.34.59.23/WestChesterRideCorp/json.php" method="GET" id="f_34" enctype="multipart/form-data"><table><input type="hidden" name="url" value="http://52.34.59.23/WestChesterRideCorp/json.php" ><input type="hidden" name="method" value="GET" ><tr><th>Txtb_email</th><Td><input type="text" name="txtb_email" value="us140@yahoo.com" ></td></tr><tr><th>Txtb_did</th><Td><input type="text" name="txtb_did" value="5" ></td></tr><tr><th>Refference_id</th><Td><input type="text" name="refference_id" value="1430" ></td></tr><tr><td colspan="2"><a onClick="FormSubmitData('http://52.34.59.23/WestChesterRideCorp/json.php',34)" class="myButton">Test</a></td></tr><tr><td colspan="2"><div id="response_testapi_34"></div> </td></tr></table></form></td></tr></table></section><section id="passenger_response_to_driver_call_new"><H1>   passenger_response_to_driver_call_new</H1> <div class="btn_get"> GET</div><hr/> <table><tr><th> Name  </th><Td>   passenger_response_to_driver_call_new</td></tr><tr><th> Url  </th><Td>    json.php</td></tr><tr><th> Parameters  </th><Td><table><tr><th>Name</th><th>Type</th><th>Required</th><th>Description</th></tr><tr><td>txtb_email</td><td>string</td><td>Yes</td><td>passenger account email</td></tr><tr><td>txtb_did</td><td>string</td><td>Yes</td><td>us141@yahoo.com</td></tr><tr><td>refference_id</td><td>int</td><td>Yes</td><td>the call reference id</td></tr><tr><td>drivers_ids</td><td>string</td><td>Yes</td><td>1,2</td></tr></table></td></tr><tr><Th> Success  </th><Td><pre>{
+    "type": false,
+    "message": "NO tag found"
+}</pre></td></tr><tr><Th> Error  </th><Td><pre>{
+    "type": false,
+    "message": "NO tag found"
+}</pre></td></tr><tr><Th> Description  </th><Td>  </td></tr><tr><Th> Test Api  </th><Td><form action="http://52.34.59.23/WestChesterRideCorp/json.php" method="GET" id="f_35" enctype="multipart/form-data"><table><input type="hidden" name="url" value="http://52.34.59.23/WestChesterRideCorp/json.php" ><input type="hidden" name="method" value="GET" ><tr><th>Txtb_email</th><Td><input type="text" name="txtb_email" value="us140@yahoo.com" ></td></tr><tr><th>Txtb_did</th><Td><input type="text" name="txtb_did" value="5" ></td></tr><tr><th>Refference_id</th><Td><input type="text" name="refference_id" value="1430" ></td></tr><tr><th>Drivers_ids</th><Td><input type="text" name="drivers_ids" value="5" ></td></tr><tr><td colspan="2"><a onClick="FormSubmitData('http://52.34.59.23/WestChesterRideCorp/json.php',35)" class="myButton">Test</a></td></tr><tr><td colspan="2"><div id="response_testapi_35"></div> </td></tr></table></form></td></tr></table></section><section id="passenger_response_to_driver_call_accept"><H1>   passenger_response_to_driver_call_accept</H1> <div class="btn_get"> GET</div><hr/> <table><tr><th> Name  </th><Td>   passenger_response_to_driver_call_accept</td></tr><tr><th> Url  </th><Td>    json.php</td></tr><tr><th> Parameters  </th><Td><table><tr><th>Name</th><th>Type</th><th>Required</th><th>Description</th></tr><tr><td>txtb_email</td><td>string</td><td>Yes</td><td>passenger account email</td></tr><tr><td>txtb_did</td><td>string</td><td>Yes</td><td>us141@yahoo.com</td></tr><tr><td>refference_id</td><td>int</td><td>Yes</td><td>the call reference id</td></tr></table></td></tr><tr><Th> Success  </th><Td><pre>{
+    "type": false,
+    "message": "NO tag found"
+}</pre></td></tr><tr><Th> Error  </th><Td><pre>{
+    "type": false,
+    "message": "NO tag found"
+}</pre></td></tr><tr><Th> Description  </th><Td>  </td></tr><tr><Th> Test Api  </th><Td><form action="http://52.34.59.23/WestChesterRideCorp/json.php" method="GET" id="f_36" enctype="multipart/form-data"><table><input type="hidden" name="url" value="http://52.34.59.23/WestChesterRideCorp/json.php" ><input type="hidden" name="method" value="GET" ><tr><th>Txtb_email</th><Td><input type="text" name="txtb_email" value="us140@yahoo.com" ></td></tr><tr><th>Txtb_did</th><Td><input type="text" name="txtb_did" value="5" ></td></tr><tr><th>Refference_id</th><Td><input type="text" name="refference_id" value="1430" ></td></tr><tr><td colspan="2"><a onClick="FormSubmitData('http://52.34.59.23/WestChesterRideCorp/json.php',36)" class="myButton">Test</a></td></tr><tr><td colspan="2"><div id="response_testapi_36"></div> </td></tr></table></form></td></tr></table></section><section id="passenger_refuse_driver_call"><H1>   passenger_refuse_driver_call</H1> <div class="btn_get"> GET</div><hr/> <table><tr><th> Name  </th><Td>   passenger_refuse_driver_call</td></tr><tr><th> Url  </th><Td>    json.php</td></tr><tr><th> Parameters  </th><Td><table><tr><th>Name</th><th>Type</th><th>Required</th><th>Description</th></tr><tr><td>txtb_email</td><td>string</td><td>Yes</td><td>passenger account email</td></tr><tr><td>txtb_did</td><td>string</td><td>Yes</td><td>us141@yahoo.com</td></tr><tr><td>refference_id</td><td>int</td><td>Yes</td><td>the call reference id</td></tr></table></td></tr><tr><Th> Success  </th><Td><pre>{
+    "type": false,
+    "message": "NO tag found"
+}</pre></td></tr><tr><Th> Error  </th><Td><pre>{
+    "type": false,
+    "message": "NO tag found"
+}</pre></td></tr><tr><Th> Description  </th><Td>  </td></tr><tr><Th> Test Api  </th><Td><form action="http://52.34.59.23/WestChesterRideCorp/json.php" method="GET" id="f_37" enctype="multipart/form-data"><table><input type="hidden" name="url" value="http://52.34.59.23/WestChesterRideCorp/json.php" ><input type="hidden" name="method" value="GET" ><tr><th>Txtb_email</th><Td><input type="text" name="txtb_email" value="us140@yahoo.com" ></td></tr><tr><th>Txtb_did</th><Td><input type="text" name="txtb_did" value="5" ></td></tr><tr><th>Refference_id</th><Td><input type="text" name="refference_id" value="1430" ></td></tr><tr><td colspan="2"><a onClick="FormSubmitData('http://52.34.59.23/WestChesterRideCorp/json.php',37)" class="myButton">Test</a></td></tr><tr><td colspan="2"><div id="response_testapi_37"></div> </td></tr></table></form></td></tr></table></section><section id="passenger_response_to_driver_call_reject"><H1>   passenger_response_to_driver_call_reject</H1> <div class="btn_get"> GET</div><hr/> <table><tr><th> Name  </th><Td>   passenger_response_to_driver_call_reject</td></tr><tr><th> Url  </th><Td>    json.php</td></tr><tr><th> Parameters  </th><Td><table><tr><th>Name</th><th>Type</th><th>Required</th><th>Description</th></tr><tr><td>txtb_email</td><td>string</td><td>Yes</td><td>passenger account email</td></tr><tr><td>txtb_did</td><td>string</td><td>Yes</td><td>us141@yahoo.com</td></tr><tr><td>refference_id</td><td>int</td><td>Yes</td><td>the call reference id</td></tr></table></td></tr><tr><Th> Success  </th><Td><pre>{
+    "type": false,
+    "message": "NO tag found"
+}</pre></td></tr><tr><Th> Error  </th><Td><pre>{
+    "type": false,
+    "message": "NO tag found"
+}</pre></td></tr><tr><Th> Description  </th><Td>  </td></tr><tr><Th> Test Api  </th><Td><form action="http://52.34.59.23/WestChesterRideCorp/json.php" method="GET" id="f_38" enctype="multipart/form-data"><table><input type="hidden" name="url" value="http://52.34.59.23/WestChesterRideCorp/json.php" ><input type="hidden" name="method" value="GET" ><tr><th>Txtb_email</th><Td><input type="text" name="txtb_email" value="us140@yahoo.com" ></td></tr><tr><th>Txtb_did</th><Td><input type="text" name="txtb_did" value="5" ></td></tr><tr><th>Refference_id</th><Td><input type="text" name="refference_id" value="1430" ></td></tr><tr><td colspan="2"><a onClick="FormSubmitData('http://52.34.59.23/WestChesterRideCorp/json.php',38)" class="myButton">Test</a></td></tr><tr><td colspan="2"><div id="response_testapi_38"></div> </td></tr></table></form></td></tr></table></section><section id="driver_response_to_passenger_call_reject"><H1>   driver_response_to_passenger_call_reject</H1> <div class="btn_get"> GET</div><hr/> <table><tr><th> Name  </th><Td>   driver_response_to_passenger_call_reject</td></tr><tr><th> Url  </th><Td>    json.php</td></tr><tr><th> Parameters  </th><Td><table><tr><th>Name</th><th>Type</th><th>Required</th><th>Description</th></tr><tr><td>txtb_email"</td><td>string</td><td>Yes</td><td>driver account email</td></tr><tr><td>txtb_pid</td><td>string</td><td>Yes</td><td>us141@yahoo.com</td></tr><tr><td>refference_id</td><td>int</td><td>Yes</td><td>the call reference id</td></tr></table></td></tr><tr><Th> Success  </th><Td><pre>{
+    "type": false,
+    "message": "NO tag found"
+}</pre></td></tr><tr><Th> Error  </th><Td><pre>{
+    "type": false,
+    "message": "NO tag found"
+}</pre></td></tr><tr><Th> Description  </th><Td>  </td></tr><tr><Th> Test Api  </th><Td><form action="http://52.34.59.23/WestChesterRideCorp/json.php" method="GET" id="f_39" enctype="multipart/form-data"><table><input type="hidden" name="url" value="http://52.34.59.23/WestChesterRideCorp/json.php" ><input type="hidden" name="method" value="GET" ><tr><th>Txtb_email"</th><Td><input type="text" name="txtb_email"" value="us140@yahoo.com" ></td></tr><tr><th>Txtb_pid</th><Td><input type="text" name="txtb_pid" value="5" ></td></tr><tr><th>Refference_id</th><Td><input type="text" name="refference_id" value="1430" ></td></tr><tr><td colspan="2"><a onClick="FormSubmitData('http://52.34.59.23/WestChesterRideCorp/json.php',39)" class="myButton">Test</a></td></tr><tr><td colspan="2"><div id="response_testapi_39"></div> </td></tr></table></form></td></tr></table></section><section id="iAmArrived"><H1>   iAmArrived</H1> <div class="btn_get"> GET</div><hr/> <table><tr><th> Name  </th><Td>   iAmArrived</td></tr><tr><th> Url  </th><Td>    json.php</td></tr><tr><th> Parameters  </th><Td><table><tr><th>Name</th><th>Type</th><th>Required</th><th>Description</th></tr><tr><td>txtb_pid</td><td>string</td><td>Yes</td><td>passenger account email</td></tr><tr><td>txtb_did</td><td>string</td><td>Yes</td><td>us141@yahoo.com</td></tr><tr><td>refference_id</td><td>int</td><td>Yes</td><td>the call reference id</td></tr></table></td></tr><tr><Th> Success  </th><Td><pre>{
+    "type": false,
+    "message": "NO tag found"
+}</pre></td></tr><tr><Th> Error  </th><Td><pre>{
+    "type": false,
+    "message": "NO tag found"
+}</pre></td></tr><tr><Th> Description  </th><Td>  </td></tr><tr><Th> Test Api  </th><Td><form action="http://52.34.59.23/WestChesterRideCorp/json.php" method="GET" id="f_40" enctype="multipart/form-data"><table><input type="hidden" name="url" value="http://52.34.59.23/WestChesterRideCorp/json.php" ><input type="hidden" name="method" value="GET" ><tr><th>Txtb_pid</th><Td><input type="text" name="txtb_pid" value="us140@yahoo.com" ></td></tr><tr><th>Txtb_did</th><Td><input type="text" name="txtb_did" value="5" ></td></tr><tr><th>Refference_id</th><Td><input type="text" name="refference_id" value="1430" ></td></tr><tr><td colspan="2"><a onClick="FormSubmitData('http://52.34.59.23/WestChesterRideCorp/json.php',40)" class="myButton">Test</a></td></tr><tr><td colspan="2"><div id="response_testapi_40"></div> </td></tr></table></form></td></tr></table></section><section id="start_boarding_by_driver"><H1>   start_boarding_by_driver</H1> <div class="btn_get"> GET</div><hr/> <table><tr><th> Name  </th><Td>   start_boarding_by_driver</td></tr><tr><th> Url  </th><Td>    json.php</td></tr><tr><th> Parameters  </th><Td><table><tr><th>Name</th><th>Type</th><th>Required</th><th>Description</th></tr><tr><td>txtb_pid</td><td>string</td><td>Yes</td><td>passenger account email</td></tr><tr><td>txtb_did</td><td>string</td><td>Yes</td><td>us141@yahoo.com</td></tr><tr><td>refference_id</td><td>int</td><td>Yes</td><td>the call reference id</td></tr></table></td></tr><tr><Th> Success  </th><Td><pre>{
+    "type": false,
+    "message": "NO tag found"
+}</pre></td></tr><tr><Th> Error  </th><Td><pre>{
+    "type": false,
+    "message": "NO tag found"
+}</pre></td></tr><tr><Th> Description  </th><Td>  </td></tr><tr><Th> Test Api  </th><Td><form action="http://52.34.59.23/WestChesterRideCorp/json.php" method="GET" id="f_41" enctype="multipart/form-data"><table><input type="hidden" name="url" value="http://52.34.59.23/WestChesterRideCorp/json.php" ><input type="hidden" name="method" value="GET" ><tr><th>Txtb_pid</th><Td><input type="text" name="txtb_pid" value="us140@yahoo.com" ></td></tr><tr><th>Txtb_did</th><Td><input type="text" name="txtb_did" value="5" ></td></tr><tr><th>Refference_id</th><Td><input type="text" name="refference_id" value="1430" ></td></tr><tr><td colspan="2"><a onClick="FormSubmitData('http://52.34.59.23/WestChesterRideCorp/json.php',41)" class="myButton">Test</a></td></tr><tr><td colspan="2"><div id="response_testapi_41"></div> </td></tr></table></form></td></tr></table></section><section id="start_boarding_by_passenger"><H1>   start_boarding_by_passenger</H1> <div class="btn_get"> GET</div><hr/> <table><tr><th> Name  </th><Td>   start_boarding_by_passenger</td></tr><tr><th> Url  </th><Td>    json.php</td></tr><tr><th> Parameters  </th><Td><table><tr><th>Name</th><th>Type</th><th>Required</th><th>Description</th></tr><tr><td>txtb_pid</td><td>string</td><td>Yes</td><td>passenger account email</td></tr><tr><td>txtb_did</td><td>string</td><td>Yes</td><td>us141@yahoo.com</td></tr><tr><td>refference_id</td><td>int</td><td>Yes</td><td>the call reference id</td></tr></table></td></tr><tr><Th> Success  </th><Td><pre>{
+    "type": false,
+    "message": "NO tag found"
+}</pre></td></tr><tr><Th> Error  </th><Td><pre>{
+    "type": false,
+    "message": "NO tag found"
+}</pre></td></tr><tr><Th> Description  </th><Td>  </td></tr><tr><Th> Test Api  </th><Td><form action="http://52.34.59.23/WestChesterRideCorp/json.php" method="GET" id="f_42" enctype="multipart/form-data"><table><input type="hidden" name="url" value="http://52.34.59.23/WestChesterRideCorp/json.php" ><input type="hidden" name="method" value="GET" ><tr><th>Txtb_pid</th><Td><input type="text" name="txtb_pid" value="us140@yahoo.com" ></td></tr><tr><th>Txtb_did</th><Td><input type="text" name="txtb_did" value="5" ></td></tr><tr><th>Refference_id</th><Td><input type="text" name="refference_id" value="1430" ></td></tr><tr><td colspan="2"><a onClick="FormSubmitData('http://52.34.59.23/WestChesterRideCorp/json.php',42)" class="myButton">Test</a></td></tr><tr><td colspan="2"><div id="response_testapi_42"></div> </td></tr></table></form></td></tr></table></section><section id="end_boarding_by_passenger"><H1>   end_boarding_by_passenger</H1> <div class="btn_get"> GET</div><hr/> <table><tr><th> Name  </th><Td>   end_boarding_by_passenger</td></tr><tr><th> Url  </th><Td>    json.php</td></tr><tr><th> Parameters  </th><Td><table><tr><th>Name</th><th>Type</th><th>Required</th><th>Description</th></tr><tr><td>txtb_pid</td><td>string</td><td>Yes</td><td>passenger account email</td></tr><tr><td>txtb_did</td><td>string</td><td>Yes</td><td>us141@yahoo.com</td></tr><tr><td>refference_id</td><td>int</td><td>Yes</td><td>the call reference id</td></tr></table></td></tr><tr><Th> Success  </th><Td><pre>{
+    "type": false,
+    "message": "NO tag found"
+}</pre></td></tr><tr><Th> Error  </th><Td><pre>{
+    "type": false,
+    "message": "NO tag found"
+}</pre></td></tr><tr><Th> Description  </th><Td>  </td></tr><tr><Th> Test Api  </th><Td><form action="http://52.34.59.23/WestChesterRideCorp/json.php" method="GET" id="f_43" enctype="multipart/form-data"><table><input type="hidden" name="url" value="http://52.34.59.23/WestChesterRideCorp/json.php" ><input type="hidden" name="method" value="GET" ><tr><th>Txtb_pid</th><Td><input type="text" name="txtb_pid" value="us140@yahoo.com" ></td></tr><tr><th>Txtb_did</th><Td><input type="text" name="txtb_did" value="5" ></td></tr><tr><th>Refference_id</th><Td><input type="text" name="refference_id" value="1430" ></td></tr><tr><td colspan="2"><a onClick="FormSubmitData('http://52.34.59.23/WestChesterRideCorp/json.php',43)" class="myButton">Test</a></td></tr><tr><td colspan="2"><div id="response_testapi_43"></div> </td></tr></table></form></td></tr></table></section><section id="end_boarding_by_driver"><H1>   end_boarding_by_driver</H1> <div class="btn_get"> GET</div><hr/> <table><tr><th> Name  </th><Td>   end_boarding_by_driver</td></tr><tr><th> Url  </th><Td>    json.php</td></tr><tr><th> Parameters  </th><Td><table><tr><th>Name</th><th>Type</th><th>Required</th><th>Description</th></tr><tr><td>txtb_pid</td><td>string</td><td>Yes</td><td>passenger account email</td></tr><tr><td>txtb_did</td><td>string</td><td>Yes</td><td>driver account email</td></tr><tr><td>refference_id</td><td>int</td><td>Yes</td><td>the call reference id</td></tr></table></td></tr><tr><Th> Success  </th><Td><pre>{
+    "type": false,
+    "message": "NO tag found"
+}</pre></td></tr><tr><Th> Error  </th><Td><pre>{
+    "type": false,
+    "message": "NO tag found"
+}</pre></td></tr><tr><Th> Description  </th><Td>  </td></tr><tr><Th> Test Api  </th><Td><form action="http://52.34.59.23/WestChesterRideCorp/json.php" method="GET" id="f_44" enctype="multipart/form-data"><table><input type="hidden" name="url" value="http://52.34.59.23/WestChesterRideCorp/json.php" ><input type="hidden" name="method" value="GET" ><tr><th>Txtb_pid</th><Td><input type="text" name="txtb_pid" value="us140@yahoo.com" ></td></tr><tr><th>Txtb_did</th><Td><input type="text" name="txtb_did" value="us141@yahoo.com" ></td></tr><tr><th>Refference_id</th><Td><input type="text" name="refference_id" value="1430" ></td></tr><tr><td colspan="2"><a onClick="FormSubmitData('http://52.34.59.23/WestChesterRideCorp/json.php',44)" class="myButton">Test</a></td></tr><tr><td colspan="2"><div id="response_testapi_44"></div> </td></tr></table></form></td></tr></table></section><section id="response_feedback"><H1>   response_feedback</H1> <div class="btn_get"> GET</div><hr/> <table><tr><th> Name  </th><Td>   response_feedback</td></tr><tr><th> Url  </th><Td>    json.php</td></tr><tr><th> Parameters  </th><Td><table><tr><th>Name</th><th>Type</th><th>Required</th><th>Description</th></tr><tr><td>refference_id</td><td>int</td><td>Yes</td><td>Call reference id</td></tr><tr><td>txtb_pid</td><td>string</td><td>Yes</td><td>passenger account email</td></tr><tr><td>txtb_did</td><td>string</td><td>Yes</td><td>driver account email</td></tr><tr><td>txtb_comments</td><td>string</td><td>Yes</td><td>any given comments</td></tr><tr><td>txtb_stars</td><td>string</td><td>Yes</td><td>range between 1-5</td></tr><tr><td>txtb_issuccessfull</td><td>string</td><td>Yes</td><td>y/n</td></tr><tr><td>txtb_ratedby</td><td>string</td><td>Yes</td><td>p/d</td></tr></table></td></tr><tr><Th> Success  </th><Td><pre>{
+    "type": false,
+    "message": "NO tag found"
+}</pre></td></tr><tr><Th> Error  </th><Td><pre>{
+    "type": false,
+    "message": "NO tag found"
+}</pre></td></tr><tr><Th> Description  </th><Td>  </td></tr><tr><Th> Test Api  </th><Td><form action="http://52.34.59.23/WestChesterRideCorp/json.php" method="GET" id="f_45" enctype="multipart/form-data"><table><input type="hidden" name="url" value="http://52.34.59.23/WestChesterRideCorp/json.php" ><input type="hidden" name="method" value="GET" ><tr><th>Refference_id</th><Td><input type="text" name="refference_id" value="1430" ></td></tr><tr><th>Txtb_pid</th><Td><input type="text" name="txtb_pid" value="us140@yahoo.com" ></td></tr><tr><th>Txtb_did</th><Td><input type="text" name="txtb_did" value="us141@yahoo.com" ></td></tr><tr><th>Txtb_comments</th><Td><input type="text" name="txtb_comments" value="sadasdasd" ></td></tr><tr><th>Txtb_stars</th><Td><input type="text" name="txtb_stars" value="2" ></td></tr><tr><th>Txtb_issuccessfull</th><Td><input type="text" name="txtb_issuccessfull" value="y" ></td></tr><tr><th>Txtb_ratedby</th><Td><input type="text" name="txtb_ratedby" value="p" ></td></tr><tr><td colspan="2"><a onClick="FormSubmitData('http://52.34.59.23/WestChesterRideCorp/json.php',45)" class="myButton">Test</a></td></tr><tr><td colspan="2"><div id="response_testapi_45"></div> </td></tr></table></form></td></tr></table></section><section id="send_chat"><H1>   send_chat</H1> <div class="btn_get"> GET</div><hr/> <table><tr><th> Name  </th><Td>   send_chat</td></tr><tr><th> Url  </th><Td>    json.php</td></tr><tr><th> Parameters  </th><Td><table><tr><th>Name</th><th>Type</th><th>Required</th><th>Description</th></tr><tr><td>txtb_sid</td><td>string</td><td>Yes</td><td>the sender email</td></tr><tr><td>txtb_rid</td><td>string</td><td>Yes</td><td>comma separated receivers ids</td></tr><tr><td>chat_type</td><td>string</td><td>Yes</td><td>text or voice</td></tr><tr><td>txtb_msg</td><td>string</td><td>Yes</td><td>Chat Message or File</td></tr></table></td></tr><tr><Th> Success  </th><Td><pre>{
+    "type": false,
+    "message": "NO tag found"
+}</pre></td></tr><tr><Th> Error  </th><Td><pre>{
+    "type": false,
+    "message": "NO tag found"
+}</pre></td></tr><tr><Th> Description  </th><Td>  </td></tr><tr><Th> Test Api  </th><Td><form action="http://52.34.59.23/WestChesterRideCorp/json.php" method="GET" id="f_46" enctype="multipart/form-data"><table><input type="hidden" name="url" value="http://52.34.59.23/WestChesterRideCorp/json.php" ><input type="hidden" name="method" value="GET" ><tr><th>Txtb_sid</th><Td><input type="text" name="txtb_sid" value="us140@yahoo.com" ></td></tr><tr><th>Txtb_rid</th><Td><input type="text" name="txtb_rid" value="1,2" ></td></tr><tr><th>Chat_type</th><Td><input type="text" name="chat_type" value="text" ></td></tr><tr><th>Txtb_msg</th><Td><input type="text" name="txtb_msg" value="File" ></td></tr><tr><td colspan="2"><a onClick="FormSubmitData('http://52.34.59.23/WestChesterRideCorp/json.php',46)" class="myButton">Test</a></td></tr><tr><td colspan="2"><div id="response_testapi_46"></div> </td></tr></table></form></td></tr></table></section><section id="get_chat"><H1>   get_chat</H1> <div class="btn_get"> GET</div><hr/> <table><tr><th> Name  </th><Td>   get_chat</td></tr><tr><th> Url  </th><Td>    json.php</td></tr><tr><th> Parameters  </th><Td><table><tr><th>Name</th><th>Type</th><th>Required</th><th>Description</th></tr><tr><td>chat_id</td><td>int</td><td>Yes</td><td></td></tr></table></td></tr><tr><Th> Success  </th><Td><pre>{
+    "type": false,
+    "message": "NO tag found"
+}</pre></td></tr><tr><Th> Error  </th><Td><pre>{
+    "type": false,
+    "message": "NO tag found"
+}</pre></td></tr><tr><Th> Description  </th><Td>  </td></tr><tr><Th> Test Api  </th><Td><form action="http://52.34.59.23/WestChesterRideCorp/json.php" method="GET" id="f_47" enctype="multipart/form-data"><table><input type="hidden" name="url" value="http://52.34.59.23/WestChesterRideCorp/json.php" ><input type="hidden" name="method" value="GET" ><tr><th>Chat_id</th><Td><input type="text" name="chat_id" value="12" ></td></tr><tr><td colspan="2"><a onClick="FormSubmitData('http://52.34.59.23/WestChesterRideCorp/json.php',47)" class="myButton">Test</a></td></tr><tr><td colspan="2"><div id="response_testapi_47"></div> </td></tr></table></form></td></tr></table></section><section id="journey_history"><H1>   journey_history</H1> <div class="btn_get"> GET</div><hr/> <table><tr><th> Name  </th><Td>   journey_history</td></tr><tr><th> Url  </th><Td>    json.php</td></tr><tr><th> Parameters  </th><Td><table><tr><th>Name</th><th>Type</th><th>Required</th><th>Description</th></tr><tr><td>txtb_email</td><td>string</td><td>Yes</td><td>Passenger/Driver account Email</td></tr><tr><td>page_no</td><td>string</td><td>Yes</td><td>Range 1-N</td></tr><tr><td>page_rd</td><td>string</td><td>Yes</td><td>Range 1-N</td></tr></table></td></tr><tr><Th> Success  </th><Td><pre>{
+    "type": false,
+    "message": "NO tag found"
+}</pre></td></tr><tr><Th> Error  </th><Td><pre>{
+    "type": false,
+    "message": "NO tag found"
+}</pre></td></tr><tr><Th> Description  </th><Td>  </td></tr><tr><Th> Test Api  </th><Td><form action="http://52.34.59.23/WestChesterRideCorp/json.php" method="GET" id="f_48" enctype="multipart/form-data"><table><input type="hidden" name="url" value="http://52.34.59.23/WestChesterRideCorp/json.php" ><input type="hidden" name="method" value="GET" ><tr><th>Txtb_email</th><Td><input type="text" name="txtb_email" value="us140@yahoo.com" ></td></tr><tr><th>Page_no</th><Td><input type="text" name="page_no" value="12" ></td></tr><tr><th>Page_rd</th><Td><input type="text" name="page_rd" value="15" ></td></tr><tr><td colspan="2"><a onClick="FormSubmitData('http://52.34.59.23/WestChesterRideCorp/json.php',48)" class="myButton">Test</a></td></tr><tr><td colspan="2"><div id="response_testapi_48"></div> </td></tr></table></form></td></tr></table></section><section id="advance_booking_jobs"><H1>   advance_booking_jobs</H1> <div class="btn_get"> GET</div><hr/> <table><tr><th> Name  </th><Td>   advance_booking_jobs</td></tr><tr><th> Url  </th><Td>    json.php</td></tr><tr><th> Parameters  </th><Td><table><tr><th>Name</th><th>Type</th><th>Required</th><th>Description</th></tr><tr><td>txtb_email</td><td>string</td><td>Yes</td><td>Passenger/Driver account Email</td></tr><tr><td>page_no</td><td>string</td><td>Yes</td><td>Range 1-N</td></tr></table></td></tr><tr><Th> Success  </th><Td><pre>{
+    "type": false,
+    "message": "NO tag found"
+}</pre></td></tr><tr><Th> Error  </th><Td><pre>{
+    "type": false,
+    "message": "NO tag found"
+}</pre></td></tr><tr><Th> Description  </th><Td>  </td></tr><tr><Th> Test Api  </th><Td><form action="http://52.34.59.23/WestChesterRideCorp/json.php" method="GET" id="f_49" enctype="multipart/form-data"><table><input type="hidden" name="url" value="http://52.34.59.23/WestChesterRideCorp/json.php" ><input type="hidden" name="method" value="GET" ><tr><th>Txtb_email</th><Td><input type="text" name="txtb_email" value="us140@yahoo.com" ></td></tr><tr><th>Page_no</th><Td><input type="text" name="page_no" value="12" ></td></tr><tr><td colspan="2"><a onClick="FormSubmitData('http://52.34.59.23/WestChesterRideCorp/json.php',49)" class="myButton">Test</a></td></tr><tr><td colspan="2"><div id="response_testapi_49"></div> </td></tr></table></form></td></tr></table></section><section id="job_cal"><H1>   job_cal</H1> <div class="btn_get"> GET</div><hr/> <table><tr><th> Name  </th><Td>   job_cal</td></tr><tr><th> Url  </th><Td>    json.php</td></tr><tr><th> Parameters  </th><Td><table><tr><th>Name</th><th>Type</th><th>Required</th><th>Description</th></tr><tr><td>refference_id</td><td>int</td><td>Yes</td><td>Call reference id</td></tr></table></td></tr><tr><Th> Success  </th><Td><pre>{
+    "type": false,
+    "message": "NO tag found"
+}</pre></td></tr><tr><Th> Error  </th><Td><pre>{
+    "type": false,
+    "message": "NO tag found"
+}</pre></td></tr><tr><Th> Description  </th><Td>  </td></tr><tr><Th> Test Api  </th><Td><form action="http://52.34.59.23/WestChesterRideCorp/json.php" method="GET" id="f_50" enctype="multipart/form-data"><table><input type="hidden" name="url" value="http://52.34.59.23/WestChesterRideCorp/json.php" ><input type="hidden" name="method" value="GET" ><tr><th>Refference_id</th><Td><input type="text" name="refference_id" value="1430" ></td></tr><tr><td colspan="2"><a onClick="FormSubmitData('http://52.34.59.23/WestChesterRideCorp/json.php',50)" class="myButton">Test</a></td></tr><tr><td colspan="2"><div id="response_testapi_50"></div> </td></tr></table></form></td></tr></table></section><section id="job_cal2"><H1>   job_cal2</H1> <div class="btn_get"> GET</div><hr/> <table><tr><th> Name  </th><Td>   job_cal2</td></tr><tr><th> Url  </th><Td>    json.php</td></tr><tr><th> Parameters  </th><Td><table><tr><th>Name</th><th>Type</th><th>Required</th><th>Description</th></tr><tr><td>txtb_email</td><td>string</td><td>Yes</td><td>Passenger account Email</td></tr><tr><td>txtb_did</td><td>string</td><td>Yes</td><td>driver id</td></tr></table></td></tr><tr><Th> Success  </th><Td><pre>{
+    "type": false,
+    "message": "NO tag found"
+}</pre></td></tr><tr><Th> Error  </th><Td><pre>{
+    "type": false,
+    "message": "NO tag found"
+}</pre></td></tr><tr><Th> Description  </th><Td>  </td></tr><tr><Th> Test Api  </th><Td><form action="http://52.34.59.23/WestChesterRideCorp/json.php" method="GET" id="f_51" enctype="multipart/form-data"><table><input type="hidden" name="url" value="http://52.34.59.23/WestChesterRideCorp/json.php" ><input type="hidden" name="method" value="GET" ><tr><th>Txtb_email</th><Td><input type="text" name="txtb_email" value="us140@yahoo.com" ></td></tr><tr><th>Txtb_did</th><Td><input type="text" name="txtb_did" value="629" ></td></tr><tr><td colspan="2"><a onClick="FormSubmitData('http://52.34.59.23/WestChesterRideCorp/json.php',51)" class="myButton">Test</a></td></tr><tr><td colspan="2"><div id="response_testapi_51"></div> </td></tr></table></form></td></tr></table></section><section id="job_cal3"><H1>   job_cal3</H1> <div class="btn_get"> GET</div><hr/> <table><tr><th> Name  </th><Td>   job_cal3</td></tr><tr><th> Url  </th><Td>    json.php</td></tr><tr><th> Parameters  </th><Td><table><tr><th>Name</th><th>Type</th><th>Required</th><th>Description</th></tr><tr><td>txtb_email</td><td>string</td><td>Yes</td><td>Driver account Email</td></tr><tr><td>txtb_did</td><td>string</td><td>Yes</td><td>driver id</td></tr></table></td></tr><tr><Th> Success  </th><Td><pre>{
+    "type": false,
+    "message": "NO tag found"
+}</pre></td></tr><tr><Th> Error  </th><Td><pre>{
+    "type": false,
+    "message": "NO tag found"
+}</pre></td></tr><tr><Th> Description  </th><Td>  </td></tr><tr><Th> Test Api  </th><Td><form action="http://52.34.59.23/WestChesterRideCorp/json.php" method="GET" id="f_52" enctype="multipart/form-data"><table><input type="hidden" name="url" value="http://52.34.59.23/WestChesterRideCorp/json.php" ><input type="hidden" name="method" value="GET" ><tr><th>Txtb_email</th><Td><input type="text" name="txtb_email" value="us140@yahoo.com" ></td></tr><tr><th>Txtb_did</th><Td><input type="text" name="txtb_did" value="643" ></td></tr><tr><td colspan="2"><a onClick="FormSubmitData('http://52.34.59.23/WestChesterRideCorp/json.php',52)" class="myButton">Test</a></td></tr><tr><td colspan="2"><div id="response_testapi_52"></div> </td></tr></table></form></td></tr></table></section><section id="near_by_drivers"><H1>   near_by_drivers</H1> <div class="btn_get"> GET</div><hr/> <table><tr><th> Name  </th><Td>   near_by_drivers</td></tr><tr><th> Url  </th><Td>    json.php</td></tr><tr><th> Parameters  </th><Td><table><tr><th>Name</th><th>Type</th><th>Required</th><th>Description</th></tr><tr><td>txtb_email</td><td>string</td><td>Yes</td><td>the user email address</td></tr><tr><td>txtb_did</td><td>string</td><td>Yes</td><td>driver id</td></tr><tr><td>origins</td><td>string</td><td>Yes</td><td>the user latitude</td></tr><tr><td>origine</td><td>string</td><td>Yes</td><td>the user longitude</td></tr><tr><td>txtb_vehType</td><td>string</td><td>Yes</td><td>the driver vehicle type</td></tr><tr><td>origine</td><td>string</td><td>Yes</td><td>the user longitude</td></tr><tr><td>circle</td><td>string</td><td>Yes</td><td>the radius of circle to find the drives</td></tr></table></td></tr><tr><Th> Success  </th><Td><pre>{
+    "type": false,
+    "message": "NO tag found"
+}</pre></td></tr><tr><Th> Error  </th><Td><pre>{
+    "type": false,
+    "message": "NO tag found"
+}</pre></td></tr><tr><Th> Description  </th><Td>  </td></tr><tr><Th> Test Api  </th><Td><form action="http://52.34.59.23/WestChesterRideCorp/json.php" method="GET" id="f_53" enctype="multipart/form-data"><table><input type="hidden" name="url" value="http://52.34.59.23/WestChesterRideCorp/json.php" ><input type="hidden" name="method" value="GET" ><tr><th>Txtb_email</th><Td><input type="text" name="txtb_email" value="us140@yahoo.com" ></td></tr><tr><th>Txtb_did</th><Td><input type="text" name="txtb_did" value="643" ></td></tr><tr><th>Origins</th><Td><input type="text" name="origins" value="33.445566" ></td></tr><tr><th>Origine</th><Td><input type="text" name="origine" value="73.665544" ></td></tr><tr><th>Txtb_vehType</th><Td><input type="text" name="txtb_vehType" value="asdas" ></td></tr><tr><th>Origine</th><Td><input type="text" name="origine" value="73.665544" ></td></tr><tr><th>Circle</th><Td><input type="text" name="circle" value="30" ></td></tr><tr><td colspan="2"><a onClick="FormSubmitData('http://52.34.59.23/WestChesterRideCorp/json.php',53)" class="myButton">Test</a></td></tr><tr><td colspan="2"><div id="response_testapi_53"></div> </td></tr></table></form></td></tr></table></section><section id="conversation_list"><H1>   conversation_list</H1> <div class="btn_get"> GET</div><hr/> <table><tr><th> Name  </th><Td>   conversation_list</td></tr><tr><th> Url  </th><Td>    json.php</td></tr><tr><th> Parameters  </th><Td><table><tr><th>Name</th><th>Type</th><th>Required</th><th>Description</th></tr><tr><td>txtb_email</td><td>string</td><td>Yes</td><td>the email address of passenger or driver</td></tr><tr><td>page_no</td><td>string</td><td>Yes</td><td>The Page number default value is 1</td></tr><tr><td>page_rd</td><td>string</td><td>Yes</td><td>number of recodes per page</td></tr></table></td></tr><tr><Th> Success  </th><Td><pre>{
+    "type": false,
+    "message": "NO tag found"
+}</pre></td></tr><tr><Th> Error  </th><Td><pre>{
+    "type": false,
+    "message": "NO tag found"
+}</pre></td></tr><tr><Th> Description  </th><Td>  </td></tr><tr><Th> Test Api  </th><Td><form action="http://52.34.59.23/WestChesterRideCorp/json.php" method="GET" id="f_54" enctype="multipart/form-data"><table><input type="hidden" name="url" value="http://52.34.59.23/WestChesterRideCorp/json.php" ><input type="hidden" name="method" value="GET" ><tr><th>Txtb_email</th><Td><input type="text" name="txtb_email" value="us140@yahoo.com" ></td></tr><tr><th>Page_no</th><Td><input type="text" name="page_no" value="1" ></td></tr><tr><th>Page_rd</th><Td><input type="text" name="page_rd" value="25" ></td></tr><tr><td colspan="2"><a onClick="FormSubmitData('http://52.34.59.23/WestChesterRideCorp/json.php',54)" class="myButton">Test</a></td></tr><tr><td colspan="2"><div id="response_testapi_54"></div> </td></tr></table></form></td></tr></table></section><section id="chat_history"><H1>   chat_history</H1> <div class="btn_get"> GET</div><hr/> <table><tr><th> Name  </th><Td>   chat_history</td></tr><tr><th> Url  </th><Td>    json.php</td></tr><tr><th> Parameters  </th><Td><table><tr><th>Name</th><th>Type</th><th>Required</th><th>Description</th></tr><tr><td>txtb_email</td><td>string</td><td>Yes</td><td>the email address of passenger or driver</td></tr><tr><td>page_no</td><td>string</td><td>Yes</td><td>The Page number default value is 1</td></tr><tr><td>page_rd</td><td>string</td><td>Yes</td><td>number of recodes per page</td></tr><tr><td>conver_ids</td><td>string</td><td>Yes</td><td>the specific conversation ids</td></tr></table></td></tr><tr><Th> Success  </th><Td><pre>{
+    "type": false,
+    "message": "NO tag found"
+}</pre></td></tr><tr><Th> Error  </th><Td><pre>{
+    "type": false,
+    "message": "NO tag found"
+}</pre></td></tr><tr><Th> Description  </th><Td>  </td></tr><tr><Th> Test Api  </th><Td><form action="http://52.34.59.23/WestChesterRideCorp/json.php" method="GET" id="f_55" enctype="multipart/form-data"><table><input type="hidden" name="url" value="http://52.34.59.23/WestChesterRideCorp/json.php" ><input type="hidden" name="method" value="GET" ><tr><th>Txtb_email</th><Td><input type="text" name="txtb_email" value="us140@yahoo.com" ></td></tr><tr><th>Page_no</th><Td><input type="text" name="page_no" value="1" ></td></tr><tr><th>Page_rd</th><Td><input type="text" name="page_rd" value="25" ></td></tr><tr><th>Conver_ids</th><Td><input type="text" name="conver_ids" value="15" ></td></tr><tr><td colspan="2"><a onClick="FormSubmitData('http://52.34.59.23/WestChesterRideCorp/json.php',55)" class="myButton">Test</a></td></tr><tr><td colspan="2"><div id="response_testapi_55"></div> </td></tr></table></form></td></tr></table></section><section id="update_regid"><H1>   update_regid</H1> <div class="btn_get"> GET</div><hr/> <table><tr><th> Name  </th><Td>   update_regid</td></tr><tr><th> Url  </th><Td>    json.php</td></tr><tr><th> Parameters  </th><Td><table><tr><th>Name</th><th>Type</th><th>Required</th><th>Description</th></tr><tr><td>txtb_email</td><td>string</td><td>Yes</td><td>the email address of passenger or driver</td></tr><tr><td>regId</td><td>string</td><td>Yes</td><td>Device regId</td></tr></table></td></tr><tr><Th> Success  </th><Td><pre>{
+    "type": false,
+    "message": "NO tag found"
+}</pre></td></tr><tr><Th> Error  </th><Td><pre>{
+    "type": false,
+    "message": "NO tag found"
+}</pre></td></tr><tr><Th> Description  </th><Td>  </td></tr><tr><Th> Test Api  </th><Td><form action="http://52.34.59.23/WestChesterRideCorp/json.php" method="GET" id="f_56" enctype="multipart/form-data"><table><input type="hidden" name="url" value="http://52.34.59.23/WestChesterRideCorp/json.php" ><input type="hidden" name="method" value="GET" ><tr><th>Txtb_email</th><Td><input type="text" name="txtb_email" value="us140@yahoo.com" ></td></tr><tr><th>RegId</th><Td><input type="text" name="regId" value="1" ></td></tr><tr><td colspan="2"><a onClick="FormSubmitData('http://52.34.59.23/WestChesterRideCorp/json.php',56)" class="myButton">Test</a></td></tr><tr><td colspan="2"><div id="response_testapi_56"></div> </td></tr></table></form></td></tr></table></section></div></body></html>
