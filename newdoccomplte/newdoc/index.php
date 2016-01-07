@@ -180,7 +180,7 @@ $string .= '</ul><div id="documenter_copyright">Copyright '.date("Y").' APPLICON
 				else { $inputField = '<input type="text" name="'.$row[0].'" value="'.$row[3].'" >'; }
 				
 				if(strtolower($row[0]) == 'tag') {
-					$inputField = '<input type="text" readonly name="'.$row[0].'" value="'.$row[3].'" >';
+					$inputField = '<input type="text" readonly style="background: rgba(153, 153, 153, 0.42);" name="'.$row[0].'" value="'.$row[3].'" >';
 				}
 				$string .= '<tr><th>'.Ucfirst($row[0]).'</th><Td>'.$inputField.'</td></tr>';
 		}
